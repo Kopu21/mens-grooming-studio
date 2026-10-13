@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Your Chair | SOVEREIGN & CO. Booking Studio</title>
+  <meta name="description" content="Online bespoke appointment booking engine for Sovereign & Co. Choose your primary treatment, master artisan, date, time slot, and customized luxury add-ons.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Main Navigation Bar -->
+  <header class="navbar-main">
+    <div class="container nav-container">
+      <!-- LEFT SIDE: New Professional Logo & Brand Name (Clickable to Home) -->
+      <a href="index.html" class="brand-logo" aria-label="Sovereign & Co. Home">
+        <div class="brand-crest-svg">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <path d="M24 3L42 10V22C42 33 24 45 24 45C24 45 6 33 6 22V10L24 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M15 17L33 31M33 17L15 31" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+            <path d="M24 9V14M24 34V39" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">SOVEREIGN &amp; CO.</span>
+          <span class="brand-subtitle">BARBERS &amp; BEARD ATELIER</span>
+        </div>
+      </a>
+
+      <!-- CENTER NAVIGATION -->
+      <nav class="nav-links-wrapper">
+        <ul class="nav-menu">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link">Home <i class="fas fa-chevron-down nav-caret"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="home-1.html">Home 1</a></li>
+              <li><a href="home-2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down nav-caret"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#haircuts">Haircuts</a></li>
+              <li><a href="services.html#beard-trims">Beard Trims</a></li>
+              <li><a href="services.html#beard-styling">Beard Styling</a></li>
+              <li><a href="services.html#hair-styling">Hair Styling</a></li>
+              <li><a href="services.html#shaving">Shaving</a></li>
+              <li><a href="services.html#grooming-packages">Grooming Packages</a></li>
+            </ul>
+          </li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT SIDE: RTL / LTR toggle -> Dark Theme / Light Theme toggle -> Cart -> Book Chair -> Hamburger -->
+      <div class="nav-actions">
+        <button class="nav-control-btn dir-toggle-btn" title="Toggle RTL/LTR Direction" aria-label="Toggle Direction">
+          <i class="fas fa-right-left"></i> <span>RTL</span>
+        </button>
+        <button class="nav-control-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Dark/Light Theme">
+          <i class="fas fa-sun text-gold"></i>
+        </button>
+        <button class="nav-control-btn cart-toggle-btn" aria-label="Open Shopping Satchel">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge-count">1</span>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm book-chair-nav-btn">Book Chair</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header Banner with Background Visual -->
+  <section class="section-padding page-bg-backdrop" style="background-image: var(--overlay-banner), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80'); padding-top: 85px;">
+    <div class="container text-center">
+      <div class="section-subtitle">Private Reservation</div>
+      <h1 class="section-title">Book Your Chair</h1>
+      <p class="section-desc">Experience refined Mayfair grooming: select your primary treatment, choose your preferred schedule, and match with a dedicated master artisan.</p>
+    </div>
+  </section>
+
+  <!-- Main Booking Wizard Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="booking-wizard-card">
+
+        <!-- Step Navigation Progress Bar -->
+        <div class="booking-steps-nav" role="tablist">
+          <div class="step-indicator active" data-step="1" role="tab" tabindex="0" aria-label="Step 1: Primary Treatment">
+            <div class="step-number">1</div>
+            <div class="step-label">Treatment</div>
+          </div>
+          <div class="step-indicator" data-step="2" role="tab" tabindex="0" aria-label="Step 2: Schedule & Time">
+            <div class="step-number">2</div>
+            <div class="step-label">Schedule</div>
+          </div>
+          <div class="step-indicator" data-step="3" role="tab" tabindex="0" aria-label="Step 3: Master Artisan">
+            <div class="step-number">3</div>
+            <div class="step-label">Master Artisan</div>
+          </div>
+          <div class="step-indicator" data-step="4" role="tab" tabindex="0" aria-label="Step 4: Customer Details">
+            <div class="step-number">4</div>
+            <div class="step-label">Customer Details</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: flex-start;">
+          
+          <!-- Steps Left Column -->
+          <div>
+
+            <!-- STEP 1: Select Primary Treatment -->
+            <div class="booking-step-content active" id="bookingStep1">
+              <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Step 1 – Select Primary Treatment</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 22px;">Choose your primary ritual. Click any treatment card to select your appointment focus.</p>
+              
+              <div class="selectable-cards-grid" role="radiogroup" aria-label="Primary Treatment Options">
+                <!-- 1. Scissor Silhouette -->
+                <div class="selectable-card selected" data-service="scissor-silhouette" role="radio" aria-checked="true" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; padding-right: 25px;">Executive Scissor Silhouette</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Pure hand shear craftsmanship, scissor graduation, and bespoke styling.</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                    <strong class="text-gold">$80.00</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">55 Mins</span>
+                  </div>
+                </div>
+
+                <!-- 2. Beard Trim -->
+                <div class="selectable-card" data-service="beard-trim" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; padding-right: 25px;">Architectural Beard Trim</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Precision cheek line-up, debulking, hot towel wrap & organic beard balm.</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                    <strong class="text-gold">$50.00</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">40 Mins</span>
+                  </div>
+                </div>
+
+                <!-- 3. Beard Styling -->
+                <div class="selectable-card" data-service="beard-styling" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; padding-right: 25px;">Grand Beard Styling</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Full Viking architecture, mustache waxing, and steam directional training.</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                    <strong class="text-gold">$55.00</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">40 Mins</span>
+                  </div>
+                </div>
+
+                <!-- 4. Hair Styling -->
+                <div class="selectable-card" data-service="hair-styling" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; padding-right: 25px;">Modern Hair Styling</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Scalp wash, blowout directional texture design, and sea clay finish.</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                    <strong class="text-gold">$45.00</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">30 Mins</span>
+                  </div>
+                </div>
+
+                <!-- 5. Premium Shaving -->
+                <div class="selectable-card" data-service="royal-shave" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; padding-right: 25px;">Premium Royal Shaving</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">3 eucalyptus steam towels, badger brush lather & two-pass straight razor.</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                    <strong class="text-gold">$55.00</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">40 Mins</span>
+                  </div>
+                </div>
+
+                <!-- 6. Thermal Stone Facial -->
+                <div class="selectable-card" data-service="thermal-facial" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; padding-right: 25px;">Thermal Stone Hydration Facial</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Basalt warm stone tension release, jade cold stone and botanical serum.</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                    <strong class="text-gold">$65.00</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">40 Mins</span>
+                  </div>
+                </div>
+
+                <!-- 7. Complete Grooming Package -->
+                <div class="selectable-card" data-service="executive-combo" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; padding-right: 25px;">Complete Sovereign Package</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Master Haircut + Beard Sculpt + Scalp Detox + Thermal Stone Facial.</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                    <strong class="text-gold">$120.00</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">85 Mins</span>
+                  </div>
+                </div>
+
+                <!-- 8. Japanese Scalp Detox -->
+                <div class="selectable-card" data-service="scalp-therapy" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; padding-right: 25px;">Japanese Scalp Detox</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Dead sea salt scrub, high-frequency stimulation & cranial massage.</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                    <strong class="text-gold">$75.00</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">50 Mins</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="text-align: right;">
+                <button type="button" class="btn btn-primary btn-next-step">Next: Select Schedule <i class="fas fa-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Select Date & Time Slot -->
+            <div class="booking-step-content" id="bookingStep2">
+              <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Step 2 – Select Date & Time Slot</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 22px;">Choose your preferred date and available Mayfair atelier slot.</p>
+              
+              <div class="form-group" style="margin-bottom: 25px; max-width: 320px;">
+                <label><i class="fas fa-calendar-alt"></i> Select Appointment Date *</label>
+                <input type="date" class="form-control" id="bookingDateInput" value="2026-10-15" required>
+              </div>
+
+              <div style="margin-bottom: 25px;">
+                <label style="font-size: 0.82rem; text-transform: uppercase; color: var(--gold-primary); font-weight: 700; letter-spacing: 0.1em; display: block; margin-bottom: 10px;">
+                  <i class="fas fa-clock"></i> Available Studio Time Slots
+                </label>
+                <div class="time-slots-grid" role="group" aria-label="Available Time Slots">
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">09:00 AM</div>
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">10:00 AM</div>
+                  <div class="time-slot-btn selected" tabindex="0" role="button" aria-pressed="true">11:00 AM</div>
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">12:00 PM</div>
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">02:00 PM</div>
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">03:00 PM</div>
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">04:00 PM</div>
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">05:00 PM</div>
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">06:00 PM</div>
+                  <div class="time-slot-btn" tabindex="0" role="button" aria-pressed="false">07:00 PM</div>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button type="button" class="btn btn-secondary btn-prev-step"><i class="fas fa-arrow-left"></i> Back</button>
+                <button type="button" class="btn btn-primary btn-next-step">Next: Master Artisan <i class="fas fa-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Choose Your Master Artisan -->
+            <div class="booking-step-content" id="bookingStep3">
+              <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Step 3 – Choose Your Master Artisan</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 22px;">Select the master barber who will architect your presentation.</p>
+
+              <div class="selectable-cards-grid" role="radiogroup" aria-label="Master Artisan Options">
+                <!-- Barber 1: Julian -->
+                <div class="selectable-card selected" data-barber="julian" role="radio" aria-checked="true" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Julian Vance" class="artisan-card-img">
+                  <h4 style="font-size: 1.1rem; margin-bottom: 2px;">Julian Vance</h4>
+                  <p style="font-size: 0.76rem; color: var(--gold-primary); text-transform: uppercase; font-weight: 700; margin-bottom: 8px;">Senior Master Barber</p>
+                  <p style="font-size: 0.82rem; color: var(--text-muted);">Specialist in executive scissor tapering, classic silhouettes, and cranial mapping.</p>
+                </div>
+
+                <!-- Barber 2: Marcus -->
+                <div class="selectable-card" data-barber="marcus" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Marcus Sterling" class="artisan-card-img">
+                  <h4 style="font-size: 1.1rem; margin-bottom: 2px;">Marcus Sterling</h4>
+                  <p style="font-size: 0.76rem; color: var(--gold-primary); text-transform: uppercase; font-weight: 700; margin-bottom: 8px;">Beard Architect</p>
+                  <p style="font-size: 0.82rem; color: var(--text-muted);">Master of thick beard debulking, hot towel wraps, and surgical jawline razor gradients.</p>
+                </div>
+
+                <!-- Barber 3: David -->
+                <div class="selectable-card" data-barber="david" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="David Thorne" class="artisan-card-img">
+                  <h4 style="font-size: 1.1rem; margin-bottom: 2px;">David Thorne</h4>
+                  <p style="font-size: 0.76rem; color: var(--gold-primary); text-transform: uppercase; font-weight: 700; margin-bottom: 8px;">Razor Specialist</p>
+                  <p style="font-size: 0.82rem; color: var(--text-muted);">Pioneer of traditional straight razor stropping, hot steam aromatherapy, and scalp care.</p>
+                </div>
+
+                <!-- Barber 4: Alexander -->
+                <div class="selectable-card" data-barber="alexander" role="radio" aria-checked="false" tabindex="0">
+                  <div class="card-select-badge"><i class="fas fa-check"></i></div>
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Alexander Cross" class="artisan-card-img">
+                  <h4 style="font-size: 1.1rem; margin-bottom: 2px;">Alexander Cross</h4>
+                  <p style="font-size: 0.76rem; color: var(--gold-primary); text-transform: uppercase; font-weight: 700; margin-bottom: 8px;">Creative Director</p>
+                  <p style="font-size: 0.82rem; color: var(--text-muted);">Founder and 18-year veteran of high-fashion and international executive grooming.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between;">
+                <button type="button" class="btn btn-secondary btn-prev-step"><i class="fas fa-arrow-left"></i> Back</button>
+                <button type="button" class="btn btn-primary btn-next-step">Next: Enter Details <i class="fas fa-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Customer Details & Curated Add-ons -->
+            <div class="booking-step-content" id="bookingStep4">
+              <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Step 4 – Customer Details & Confirmation</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 22px;">Provide your contact coordinates for appointment confirmation and concierge preparation.</p>
+
+              <!-- Optional Curated Add-ons -->
+              <div style="background: var(--bg-dark); border: 1px solid var(--border-subtle); padding: 20px; border-radius: var(--radius-md); margin-bottom: 25px;">
+                <h4 style="font-size: 0.95rem; color: var(--gold-primary); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em;">
+                  <i class="fas fa-plus-circle"></i> Enhance Your Treatment
+                </h4>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 0.9rem;">
+                    <input type="checkbox" class="addon-checkbox" data-addon-name="Dead Sea Scalp Scrub" data-addon-price="25">
+                    <span>Dead Sea Mineral Scalp Scrub (+$25)</span>
+                  </label>
+
+                  <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 0.9rem;">
+                    <input type="checkbox" class="addon-checkbox" data-addon-name="Jade Cold Stone Eye Compress" data-addon-price="20">
+                    <span>Jade Cold Stone Eye Soothing Compress (+$20)</span>
+                  </label>
+
+                  <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 0.9rem;">
+                    <input type="checkbox" class="addon-checkbox" data-addon-name="Black Amber Beard Oil (Take-Home)" data-addon-price="48">
+                    <span>Black Amber Beard Oil Bottle (Take-Home) (+$48)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Customer Form -->
+              <form id="bookingFinalForm" style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="form-group">
+                  <label><i class="fas fa-user"></i> Full Name *</label>
+                  <input type="text" id="clientName" name="fullName" required class="form-control" placeholder="e.g. Harrison Bennett" autocomplete="name">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                  <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Email Address *</label>
+                    <input type="email" id="clientEmail" name="email" required class="form-control" placeholder="harrison@domain.com" autocomplete="email">
+                  </div>
+                  <div class="form-group">
+                    <label><i class="fas fa-phone"></i> Phone Number *</label>
+                    <input type="tel" id="clientPhone" name="phone" inputmode="numeric" pattern="[0-9]*" required class="form-control" placeholder="e.g. 9876543210" autocomplete="tel">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label><i class="fas fa-comment"></i> Special Requests / Skin Notes / Beverage Choice</label>
+                  <textarea id="clientNotes" rows="3" class="form-control" placeholder="e.g. Sensitive skin on lower neck; prefer single-malt whiskey on arrival..."></textarea>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+                  <button type="button" class="btn btn-secondary btn-prev-step"><i class="fas fa-arrow-left"></i> Back</button>
+                  <button type="submit" class="btn btn-primary"><i class="fas fa-check-circle"></i> Confirm Reservation</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+          <!-- Live Summary Right Sidebar -->
+          <div style="background: var(--bg-dark); border: 1px solid var(--border-gold); padding: 25px; border-radius: var(--radius-md); position: sticky; top: 110px;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px;">
+              <i class="fas fa-file-invoice text-gold"></i> Reservation Summary
+            </h3>
+
+            <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.88rem;">
+              <div>
+                <span style="color: var(--text-dim); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-bottom: 3px;">Primary Treatment</span>
+                <strong id="summaryService" style="color: var(--text-white);">Executive Scissor Silhouette (55 Mins)</strong>
+              </div>
+
+              <div>
+                <span style="color: var(--text-dim); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-bottom: 3px;">Master Artisan</span>
+                <strong id="summaryBarber" style="color: var(--text-white);">Julian Vance (Senior Master Barber)</strong>
+              </div>
+
+              <div>
+                <span style="color: var(--text-dim); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-bottom: 3px;">Date &amp; Time</span>
+                <strong id="summaryDateTime" style="color: var(--text-white);">2026-10-15 @ 11:00 AM</strong>
+              </div>
+
+              <div>
+                <span style="color: var(--text-dim); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-bottom: 3px;">Curated Add-ons</span>
+                <span id="summaryAddons" style="color: var(--text-muted); font-size: 0.82rem;">None selected</span>
+              </div>
+
+              <div style="border-top: 1px solid var(--border-gold); padding-top: 14px; margin-top: 6px; display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 0.95rem; font-weight: 700;">Total Investment:</span>
+                <span id="summaryTotalPrice" style="color: var(--gold-primary); font-size: 1.4rem; font-weight: 800; font-family: var(--font-serif);">$80.00</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 20px; font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+              <i class="fas fa-shield-alt text-gold"></i> Complimentary beverage service and white-glove valet included with all chair reservations.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Confirmation Modal -->
+  <div id="appointmentSuccessModal" class="custom-modal-overlay">
+    <div class="custom-modal-card" style="text-align: center;">
+      <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(212, 175, 55, 0.15); border: 2px solid var(--gold-primary); display: inline-flex; align-items: center; justify-content: center; color: var(--gold-primary); font-size: 2rem; margin-bottom: 18px;">
+        <i class="fas fa-check"></i>
+      </div>
+      <h3 style="font-size: 1.6rem; margin-bottom: 6px;">Reservation Confirmed</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 15px;">
+        Your private chair has been successfully scheduled into our Mayfair atelier master registry.
+      </p>
+      
+      <div style="display: inline-block; background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--gold-primary); padding: 8px 18px; border-radius: 6px; margin-bottom: 15px;">
+        <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Pass Code: </span>
+        <strong id="confirmBookingRef" class="text-gold" style="font-size: 1.1rem; letter-spacing: 0.08em;">SOV-849201</strong>
+      </div>
+
+      <div id="confirmDetailsBox"></div>
+
+      <button type="button" class="btn btn-primary btn-lg" onclick="document.getElementById('appointmentSuccessModal').style.display='none'; window.location.href='index.html';" style="width: 100%;">
+        <i class="fas fa-home"></i> Return to Studio Home
+      </button>
+    </div>
+  </div>
+
+  <!-- Shopping Satchel Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 style="font-size: 1.2rem; margin: 0;"><i class="fas fa-shopping-bag text-gold"></i> Grooming Satchel</h3>
+      <button class="nav-control-btn" id="closeCartBtn" aria-label="Close Satchel" style="width: 32px; height: 32px; padding: 0;">&times;</button>
+    </div>
+    
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+        <input type="text" id="promoCodeInput" class="form-control" placeholder="Enter Promo Code" style="padding: 8px 12px; font-size: 0.8rem;">
+        <button id="applyPromoBtn" class="btn btn-secondary btn-sm" style="white-space: nowrap;">Apply</button>
+      </div>
+      <div id="cartDiscountRow" style="display: none; justify-content: space-between; font-size: 0.85rem; color: #10b981; margin-bottom: 8px;">
+        <span>Gentleman Discount:</span>
+        <span class="discount-value">-$0.00</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Satchel Total:</span>
+        <strong id="cartTotal" class="text-gold">$0.00</strong>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary btn-lg" style="width: 100%;">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Global Footer with Clickable Brand Name Link to Home -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand-link" aria-label="Return to Sovereign & Co. Home">
+            <div class="brand-crest-svg" style="width: 40px; height: 40px;">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                <path d="M24 3L42 10V22C42 33 24 45 24 45C24 45 6 33 6 22V10L24 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M15 17L33 31M33 17L15 31" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="font-size: 1.15rem;">SOVEREIGN &amp; CO.</span>
+              <span class="brand-subtitle" style="font-size: 0.58rem;">BARBERS &amp; BEARD ATELIER</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 25px;">
+            A bespoke sanctuary devoted to the mastery of the gentleman’s haircut, architectural beard sculpting, and restorative hot lather rituals.
+          </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer"
+               class="footer-social-btn" aria-label="Follow us on Instagram" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer"
+               class="footer-social-btn footer-social-btn--facebook" aria-label="Follow us on Facebook" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer"
+               class="footer-social-btn footer-social-btn--twitter" aria-label="Follow us on Twitter" title="Twitter / X">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atelier Suites</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#haircuts">Precision Haircuts</a></li>
+            <li><a href="services.html#beard-trims">Architectural Beard Care</a></li>
+            <li><a href="services.html#shaving">Traditional Hot Shaves</a></li>
+            <li><a href="services.html#grooming-packages">Executive Combos</a></li>
+            <li><a href="packages.html">Groomsmen Buyouts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Apothecary</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Organic Beard Oils</a></li>
+            <li><a href="products.html">Botanical Balms</a></li>
+            <li><a href="products.html">Volcanic Sea Clays</a></li>
+            <li><a href="products.html">Damascus Hardware</a></li>
+            <li><a href="products.html">Extrait de Parfum</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Mayfair Enclave</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+            442 St. James Boulevard<br>
+            Mayfair Heritage District, Suite 100<br>
+            London, W1J 8AQ<br>
+            <strong style="color: var(--text-white);">Tel: +1 (800) 768-3734</strong>
+          </p>
+          <a href="booking.html" class="btn btn-primary btn-sm" style="width: 100%; text-align: center;">Book Master Chair</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SOVEREIGN &amp; CO. Master Barbers &amp; Beard Atelier. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="faq.html" style="color: var(--text-muted);">Privacy Charter</a>
+          <a href="faq.html" style="color: var(--text-muted);">Terms of Service</a>
+          <a href="faq.html" style="color: var(--text-muted);">Hygiene Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
