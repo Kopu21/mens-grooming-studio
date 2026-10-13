@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOVEREIGN & CO. | Bespoke Men's Grooming & Beard Care Studio</title>
+  <meta name="description" content="Sovereign & Co. is a luxury men's grooming and beard care atelier. Experience bespoke haircuts, hot lather razor shaves, and architectural beard sculpting.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+  <header class="navbar-main">
+    <div class="container nav-container">
+      <!-- LEFT SIDE: New Professional Logo & Brand Name (Clickable to Home) -->
+      <a href="index.html" class="brand-logo" aria-label="Sovereign & Co. Home">
+        <div class="brand-crest-svg">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <path d="M24 3L42 10V22C42 33 24 45 24 45C24 45 6 33 6 22V10L24 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M15 17L33 31M33 17L15 31" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+            <path d="M24 9V14M24 34V39" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">SOVEREIGN &amp; CO.</span>
+          <span class="brand-subtitle">BARBERS &amp; BEARD ATELIER</span>
+        </div>
+      </a>
+
+      <!-- CENTER NAVIGATION (Exact Order: Home [Home 1, Home 2], About Us, Services [Haircuts, Beard Trims, Beard Styling, Hair Styling, Shaving, Grooming Packages], Products, Contact) -->
+      <nav class="nav-links-wrapper">
+        <ul class="nav-menu">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link active">Home <i class="fas fa-chevron-down nav-caret"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="home-1.html">Home 1</a></li>
+              <li><a href="home-2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link ">About Us</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link ">Services <i class="fas fa-chevron-down nav-caret"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#haircuts">Haircuts</a></li>
+              <li><a href="services.html#beard-trims">Beard Trims</a></li>
+              <li><a href="services.html#beard-styling">Beard Styling</a></li>
+              <li><a href="services.html#hair-styling">Hair Styling</a></li>
+              <li><a href="services.html#shaving">Shaving</a></li>
+              <li><a href="services.html#grooming-packages">Grooming Packages</a></li>
+            </ul>
+          </li>
+          <li><a href="products.html" class="nav-link ">Products</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT SIDE: RTL / LTR toggle -> Dark Theme / Light Theme toggle -> Cart -> Book Chair -> Hamburger -->
+      <div class="nav-actions">
+        <button class="nav-control-btn dir-toggle-btn" title="Toggle RTL/LTR Direction" aria-label="Toggle Direction">
+          <i class="fas fa-right-left"></i> <span>RTL</span>
+        </button>
+        <button class="nav-control-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Dark/Light Theme">
+          <i class="fas fa-sun text-gold"></i>
+        </button>
+        <button class="nav-control-btn cart-toggle-btn" aria-label="Open Shopping Satchel">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge-count">1</span>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm book-chair-nav-btn">Book Chair</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Background Visual -->
+  <section class="hero-wrapper page-bg-backdrop" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80');">
+    <div class="hero-bg-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-shield-alt text-gold"></i>
+          <span>Excellence in Masculine Aesthetics</span>
+        </div>
+        <h1 class="hero-title">Precision Grooming for the Distinguished Modern Gentleman</h1>
+        <p class="hero-description">
+          Where timeless barbering ritual meets contemporary architectural craft. Experience artisanal hot lather straight razor shaves, tailored beard sculpting, and restorative scalp therapy in a private club atmosphere.
+        </p>
+        <div class="hero-cta-group">
+          <a href="booking.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+          <a href="services.html" class="btn btn-secondary btn-lg"><i class="fas fa-cut"></i> Explore Services</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <h3>14,800+</h3>
+            <p>Gentlemen Served</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3>4.98 ★</h3>
+            <p>Verified Rating</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3>18 Yrs</h3>
+            <p>Master Heritage</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Booking Strip -->
+  <div class="container">
+    <div class="quick-booking-bar">
+      <form class="booking-strip-form" id="quickBookingForm">
+        <div class="form-group">
+          <label><i class="fas fa-scissors"></i> Select Service</label>
+          <select class="form-control" id="qb-service">
+            <option value="haircut">Master Signature Haircut ($65)</option>
+            <option value="beard-sculpt">Architectural Beard Sculpt ($50)</option>
+            <option value="royal-shave">Royal Hot Lather Shave ($55)</option>
+            <option value="executive-combo">The Sovereign Executive ($120)</option>
+            <option value="scalp-therapy">Scalp Detox & Mask ($75)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fas fa-user-tie"></i> Preferred Barber</label>
+          <select class="form-control" id="qb-barber">
+            <option value="julian">Julian Vance (Senior Master)</option>
+            <option value="marcus">Marcus Sterling (Beard Architect)</option>
+            <option value="david">David Thorne (Razor Specialist)</option>
+            <option value="alexander">Alexander Cross (Creative Director)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fas fa-calendar-alt"></i> Preferred Date</label>
+          <input type="date" class="form-control" id="qb-date" value="2026-10-15">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Find Chair</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FEATURED GROOMING SERVICES (Comprehensive Category Showcase) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Atelier Menu</div>
+        <h2 class="section-title">Featured Grooming Services</h2>
+        <p class="section-desc">Tailored grooming treatments designed for executive standards, refined ceremonies, and everyday confidence.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Haircuts -->
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Master Men's Haircut Precision Styling" loading="lazy">
+            <div class="service-badge-price">$65</div>
+          </div>
+          <div class="service-body">
+            <div class="service-meta"><span><i class="fas fa-clock text-gold"></i> 45 Mins</span><span>Haircut</span></div>
+            <h3 class="service-title">Men's Haircuts</h3>
+            <p class="service-desc">Complete cranial consultation, scissor-over-comb detailing, foil taper, invigorating shampoo, and styling.</p>
+            <div class="service-footer">
+              <span class="gold-badge">Essential</span>
+              <a href="booking.html?service=haircut" class="btn btn-dark btn-sm">Book Chair</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Hair Styling (Unique Ultra-HD Styling Image) -->
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" alt="Men's Hair Styling and Texture Design" loading="lazy">
+            <div class="service-badge-price">$45</div>
+          </div>
+          <div class="service-body">
+            <div class="service-meta"><span><i class="fas fa-clock text-gold"></i> 30 Mins</span><span>Styling</span></div>
+            <h3 class="service-title">Hair Styling</h3>
+            <p class="service-desc">Scalp wash, blowout directional training, and custom application of matte volcanic clay or high-shine pomade.</p>
+            <div class="service-footer">
+              <span class="gold-badge">Style</span>
+              <a href="booking.html?service=haircut" class="btn btn-dark btn-sm">Book Chair</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Beard Trims -->
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Architectural Beard Trim" loading="lazy">
+            <div class="service-badge-price">$50</div>
+          </div>
+          <div class="service-body">
+            <div class="service-meta"><span><i class="fas fa-clock text-gold"></i> 40 Mins</span><span>Beard Trim</span></div>
+            <h3 class="service-title">Beard Trims</h3>
+            <p class="service-desc">Precision line-up, length debulking, freehand symmetry sculpting, and hot towel wrap conditioning.</p>
+            <div class="service-footer">
+              <span class="gold-badge">Signature</span>
+              <a href="booking.html?service=beard-sculpt" class="btn btn-dark btn-sm">Book Chair</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Beard Styling & Shaping -->
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Grand Beard Shaping" loading="lazy">
+            <div class="service-badge-price">$55</div>
+          </div>
+          <div class="service-body">
+            <div class="service-meta"><span><i class="fas fa-clock text-gold"></i> 40 Mins</span><span>Beard Styling</span></div>
+            <h3 class="service-title">Beard Styling</h3>
+            <p class="service-desc">Architectural jawline definition, mustache sculpting with natural beeswax, and boar bristle directional training.</p>
+            <div class="service-footer">
+              <span class="gold-badge">Architecture</span>
+              <a href="booking.html?service=beard-sculpt" class="btn btn-dark btn-sm">Book Chair</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Shaving -->
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="images/shaving-ritual.jpg" alt="Master barber performing a traditional straight-razor hot lather wet shave with warm badger lather and shaving brush" loading="lazy">
+            <div class="service-badge-price">$55</div>
+          </div>
+          <div class="service-body">
+            <div class="service-meta"><span><i class="fas fa-clock text-gold"></i> 40 Mins</span><span>Hot Shave</span></div>
+            <h3 class="service-title">Shaving</h3>
+            <p class="service-desc">The traditional ritual: 3 hot eucalyptus steam towels, warm badger lather, two-pass straight razor, and cold stone tonic.</p>
+            <div class="service-footer">
+              <span class="gold-badge">Classic</span>
+              <a href="booking.html?service=royal-shave" class="btn btn-dark btn-sm">Book Chair</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Grooming Packages -->
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="images/grooming-package.jpg" alt="Complete luxury men's grooming package experience including precision haircut, beard sculpt, and facial care" loading="lazy">
+            <div class="service-badge-price">$120</div>
+          </div>
+          <div class="service-body">
+            <div class="service-meta"><span><i class="fas fa-clock text-gold"></i> 85 Mins</span><span>All-In-One</span></div>
+            <h3 class="service-title">Grooming Packages</h3>
+            <p class="service-desc">The complete experience: Master Haircut + Beard Sculpting + Scalp Detox wash + Chilled Jade Stone facial compress.</p>
+            <div class="service-footer">
+              <span class="gold-badge">VIP Choice</span>
+              <a href="booking.html?service=executive-combo" class="btn btn-dark btn-sm">Book Chair</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Services Button (Mandatory Link) -->
+      <div class="text-center" style="margin-top: 50px;">
+        <a href="services.html" class="btn btn-primary btn-lg"><i class="fas fa-scissors"></i> View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Sovereign Signature Experience -->
+  <section class="section-padding" style="background: var(--bg-dark);">
+    <div class="container">
+      <div class="split-feature">
+        <div class="split-feature-img-box">
+          <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=900&q=80" alt="Master Barber Craft and Ergonomics" class="main-img" loading="lazy">
+          <div class="split-floating-card">
+            <h4>Heritage</h4>
+            <p>1924 Belmont Re-Engineered Leather Chairs & Japanese Feathers</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-subtitle">The Difference</div>
+          <h2 class="section-title">The Sovereign Signature Ritual</h2>
+          <p class="section-desc text-left" style="margin-bottom: 20px;">
+            We view men's grooming through the discipline of anatomical geometry. Every session begins with cranial bone structure analysis to match hair volume and beard angles to your facial proportions.
+          </p>
+
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <div class="feature-icon-box"><i class="fas fa-compass"></i></div>
+              <div class="feature-item-text">
+                <h4>Cranial Bone Proportions Analysis</h4>
+                <p>We analyze crown whorls, forehead width, and neck growth direction for a cut that retains shape for weeks.</p>
+              </div>
+            </li>
+            <li class="feature-list-item">
+              <div class="feature-icon-box"><i class="fas fa-hot-tub"></i></div>
+              <div class="feature-item-text">
+                <h4>Thermal Eucalyptus Steam Prep</h4>
+                <p>Triple thermal wrap relaxes the facial muscles and softens stubborn keratin fibers before the blade touches.</p>
+              </div>
+            </li>
+            <li class="feature-list-item">
+              <div class="feature-icon-box"><i class="fas fa-snowflake"></i></div>
+              <div class="feature-item-text">
+                <h4>Cold Jade Stone Vasoconstriction</h4>
+                <p>Chilled natural jade stone instantly closes opened pores and eliminates post-shave dermal irritation.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="about.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Discover Our Philosophy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-Step Customer Grooming Journey -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Our Process</div>
+        <h2 class="section-title">The Five-Stage Grooming Journey</h2>
+        <p class="section-desc">From the moment you step through our Mayfair doors, every step is choreographed for uncompromising relaxation and precision.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step-card">
+          <div class="process-step-num">01</div>
+          <h3 class="process-step-title">Welcome & Consultation</h3>
+          <p class="process-step-desc">Enjoy a complimentary single-malt pour while your master barber evaluates hair porosity, scalp health, and facial contours.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">02</div>
+          <h3 class="process-step-title">Thermal Hydrotherapy</h3>
+          <p class="process-step-desc">A deep eucalyptus steam towel softens hair and opens dermal pores, accompanied by high-frequency scalp stimulation.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">03</div>
+          <h3 class="process-step-title">Surgical Blade Detailing</h3>
+          <p class="process-step-desc">Hand-honed Japanese steel shears and straight razors execute seamless fades, clean lines, and symmetrical beard architecture.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">04</div>
+          <h3 class="process-step-title">Botanical Infusion</h3>
+          <p class="process-step-desc">Application of our small-batch cold-pressed oils, clarifying washes, or volcanic clay suited to your hair's unique density.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">05</div>
+          <h3 class="process-step-title">The Finishing Touch</h3>
+          <p class="process-step-desc">Chilled stone pore sealing, invigorating neck tonic, and custom blow-dry directional styling for flawless presentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Spotlight (The 4 Distinct Products) -->
+  <section class="section-padding" style="background: var(--bg-dark);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Sovereign Apothecary</div>
+        <h2 class="section-title">Master Grooming Formulations</h2>
+        <p class="section-desc">Handcrafted in small batches with cold-pressed jojoba, smoked cedarwood, and volcanic sea minerals.</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- 1. Black Amber & Cedar Beard Oil (Distinct Ultra-HD Photo) -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Best Seller</span>
+            <img src="images/black-amber-cedar-beard-oil.jpg" alt="Black Amber & Cedar Beard Oil in luxury dark amber dropper bottle on natural cedarwood and slate" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Beard Care</div>
+            <h3 class="product-title">Black Amber & Cedar Beard Oil</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(142)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Golden jojoba, Moroccan argan, and smoky Virginia cedarwood for rich dermal moisture.</p>
+            <div class="product-price-row">
+              <div class="product-price">$48.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p1" data-name="Black Amber & Cedar Beard Oil" data-title="Black Amber & Cedar Beard Oil" data-price="48" data-image="images/black-amber-cedar-beard-oil.jpg" data-img="images/black-amber-cedar-beard-oil.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sandalwood Botanical Shave Cream (Distinct Ultra-HD Photo) -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Artisan Lather</span>
+            <img src="images/sandalwood-botanical-shave-cream.jpg" alt="Sandalwood Botanical Shave Cream" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Shaving Cream</div>
+            <h3 class="product-title">Sandalwood Botanical Shave Cream</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(91)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Concentrated botanical shaving cream enriched with pure Mysore sandalwood oil and coconut lipids.</p>
+            <div class="product-price-row">
+              <div class="product-price">$36.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p8" data-name="Sandalwood Botanical Shave Cream" data-title="Sandalwood Botanical Shave Cream" data-price="36" data-image="images/sandalwood-botanical-shave-cream.jpg" data-img="images/sandalwood-botanical-shave-cream.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Nordic Spruce Sculpting Balm (Distinct Ultra-HD Photo) -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">All-Day Hold</span>
+            <img src="images/nordic-spruce-sculpting-balm.jpg" alt="Nordic Spruce Sculpting Balm" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Beard Styling</div>
+            <h3 class="product-title">Nordic Spruce Sculpting Balm</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(98)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Organic beeswax, unrefined shea butter, and pine resin to lock in volume and sculpt flyaways.</p>
+            <div class="product-price-row">
+              <div class="product-price">$42.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p2" data-name="Nordic Spruce Sculpting Balm" data-title="Nordic Spruce Sculpting Balm" data-price="42" data-image="images/nordic-spruce-sculpting-balm.jpg" data-img="images/nordic-spruce-sculpting-balm.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Volcanic Sea Clay Pomade (Distinct Ultra-HD Photo) -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Zero Shine</span>
+            <img src="images/volcanic-sea-clay-pomade.jpg" alt="Volcanic Sea Clay Pomade open jar revealing dense matte textured hair styling clay on volcanic rock" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Hair Styling</div>
+            <h3 class="product-title">Volcanic Sea Clay Pomade</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span>(115)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Bentonite clay and dead sea mineral salt for effortless gritty texture and reworkable matte hold.</p>
+            <div class="product-price-row">
+              <div class="product-price">$38.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p3" data-name="Volcanic Sea Clay Pomade" data-title="Volcanic Sea Clay Pomade" data-price="38" data-image="images/volcanic-sea-clay-pomade.jpg" data-img="images/volcanic-sea-clay-pomade.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 45px;">
+        <a href="products.html" class="btn btn-secondary">Explore The Complete Apothecary</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grooming Lookbook Gallery Preview -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Visual Mastery</div>
+        <h2 class="section-title">The Sovereign Lookbook</h2>
+        <p class="section-desc">A showcase of recent bespoke haircuts, precision razor skin fades, and sculpted full beards crafted in our chairs.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div style="border-radius: var(--radius-md); overflow: hidden; position: relative; height: 320px; border: 1px solid var(--border-gold);">
+          <img src="images/lookbook-low-taper.jpg" alt="The Low Razor Taper — bespoke men's haircut with precision blended skin fade and sharp hairline" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          <div class="lookbook-overlay">
+            <h4 class="lookbook-title">The Low Razor Taper</h4>
+            <p class="lookbook-artisan">Master Julian Rossi</p>
+          </div>
+        </div>
+
+        <div style="border-radius: var(--radius-md); overflow: hidden; position: relative; height: 320px; border: 1px solid var(--border-gold);">
+          <img src="images/lookbook-viking-beard.jpg" alt="Viking Full Architecture — impeccably sculpted full beard with razor cheek line and mustache shaping" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          <div class="lookbook-overlay">
+            <h4 class="lookbook-title">Viking Full Architecture</h4>
+            <p class="lookbook-artisan">Master Marcus Vance</p>
+          </div>
+        </div>
+
+        <div style="border-radius: var(--radius-md); overflow: hidden; position: relative; height: 320px; border: 1px solid var(--border-gold);">
+          <img src="images/lookbook-scissor-silhouette.jpg" alt="Classical Scissor Silhouette — refined men's scissor-graduated haircut with natural side parting" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          <div class="lookbook-overlay">
+            <h4 class="lookbook-title">Classical Scissor Silhouette</h4>
+            <p class="lookbook-artisan">Director Alexander Cross</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 35px;">
+        <a href="gallery.html" class="btn btn-secondary"><i class="fas fa-camera"></i> View Full Lookbook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified Client Testimonials -->
+  <section class="section-padding" style="background: var(--bg-dark);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Client Endorsements</div>
+        <h2 class="section-title">Words From The Distinguished Circle</h2>
+        <p class="section-desc">Read feedback from executives, diplomats, and gentlemen who trust Sovereign & Co. for their signature presentation.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 35px 30px; border-radius: var(--radius-md); position: relative;">
+          <div style="color: var(--gold-primary); font-size: 1.1rem; margin-bottom: 15px;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-titanium); line-height: 1.8; margin-bottom: 25px; font-size: 0.95rem;">
+            "Sovereign & Co. is not a regular barbershop—it is an oasis of calm and razor craftsmanship in central London. Alexander understood my hair growth quirks immediately. The hot lather shave is unmatched."
+          </p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg-card-hover); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); font-weight: 700;">EC</div>
+            <div>
+              <h4 style="font-size: 1rem; color: var(--text-white); margin-bottom: 2px;">Edward Cavendish</h4>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">Partner, Mayfair Capital</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 35px 30px; border-radius: var(--radius-md); position: relative;">
+          <div style="color: var(--gold-primary); font-size: 1.1rem; margin-bottom: 15px;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-titanium); line-height: 1.8; margin-bottom: 25px; font-size: 0.95rem;">
+            "Marcus transformed my unruly beard into a sharp, sculpted jawline. Their Black Amber beard oil has completely eradicated the winter skin irritation I suffered with for years. Worth every penny."
+          </p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg-card-hover); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); font-weight: 700;">TR</div>
+            <div>
+              <h4 style="font-size: 1rem; color: var(--text-white); margin-bottom: 2px;">Tristan Roth</h4>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">Architect & Design Director</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 35px 30px; border-radius: var(--radius-md); position: relative;">
+          <div style="color: var(--gold-primary); font-size: 1.1rem; margin-bottom: 15px;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-titanium); line-height: 1.8; margin-bottom: 25px; font-size: 0.95rem;">
+            "We booked the Groomsmen Suite for my wedding morning. The private lounge, master haircuts, straight-edge shaves, and rare scotch tasting made it an unforgettable brotherhood tradition."
+          </p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg-card-hover); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); font-weight: 700;">LS</div>
+            <div>
+              <h4 style="font-size: 1rem; color: var(--text-white); margin-bottom: 2px;">Lord Sterling-Hughes</h4>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">Heritage Trust Executive</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">The Sovereign Advantage</div>
+        <h2 class="section-title">Why Distinguished Gentlemen Choose Us</h2>
+        <p class="section-desc">Experience an elevated standard of privacy, single-blade surgical precision, and bespoke club hospitality.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">
+          <i class="fas fa-user-shield text-gold" style="font-size: 2rem; margin-bottom: 15px; display: block;"></i>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Master Certified Artisans</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Every barber in our studio has completed 10+ years of classical apprentice blade training.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">
+          <i class="fas fa-clock text-gold" style="font-size: 2rem; margin-bottom: 15px; display: block;"></i>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Unrushed Appointments</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Generous buffer windows between sessions guarantee you never wait and are never rushed.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">
+          <i class="fas fa-glass-whiskey text-gold" style="font-size: 2rem; margin-bottom: 15px; display: block;"></i>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Reserve Lounge Hospitality</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Complimentary single-malt scotch, Japanese whisky, espresso, and vinyl acoustics.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">
+          <i class="fas fa-spray-can text-gold" style="font-size: 2rem; margin-bottom: 15px; display: block;"></i>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Hospital-Grade Hygiene</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">UV autoclaves, fresh Japanese feather blades for every single shave, and organic plant balms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Booking CTA Banner -->
+  <section class="section-padding page-bg-backdrop" style="background-image: var(--overlay-banner), url('https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1600&q=80');">
+    <div class="container text-center">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <span class="gold-badge" style="margin-bottom: 18px;"><i class="fas fa-calendar-check"></i> Private Appointments</span>
+        <h2 style="font-size: 2.4rem; margin-bottom: 16px;">Ready To Experience The Sovereign Standard?</h2>
+        <p style="color: var(--text-titanium); font-size: 1.08rem; line-height: 1.7; margin-bottom: 30px;">
+          Reserve your preferred master barber, select your treatment, and enjoy uninterrupted gentleman care.
+        </p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+          <a href="booking.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Reserve Chair Now</a>
+          <a href="contact.html" class="btn btn-secondary btn-lg"><i class="fas fa-map-marker-alt"></i> Atelier Location</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer with Clickable Brand Name Link to Home -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <!-- BRAND NAME IS A CLICKABLE LINK TO HOME (Mandatory Requirement) -->
+          <a href="index.html" class="footer-brand-link" aria-label="Return to Sovereign & Co. Home">
+            <div class="brand-crest-svg" style="width: 40px; height: 40px;">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                <path d="M24 3L42 10V22C42 33 24 45 24 45C24 45 6 33 6 22V10L24 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M15 17L33 31M33 17L15 31" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="font-size: 1.15rem;">SOVEREIGN &amp; CO.</span>
+              <span class="brand-subtitle" style="font-size: 0.58rem;">BARBERS &amp; BEARD ATELIER</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 25px;">
+            A bespoke sanctuary devoted to the mastery of the gentleman’s haircut, architectural beard sculpting, and restorative hot lather rituals.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Follow us on Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-btn--facebook" aria-label="Follow us on Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-btn--twitter" aria-label="Follow us on Twitter" title="Twitter / X"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-1.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <ul class="footer-links">
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="beard-care.html">Beard Sanctuary</a></li>
+            <li><a href="gallery.html">Visual Lookbook</a></li>
+            <li><a href="packages.html">VIP Memberships</a></li>
+            <li><a href="journal.html">Grooming Journal</a></li>
+            <li><a href="faq.html">Client FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>The Gentleman's Gazette</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 16px;">Subscribe for seasonal scent releases, private salon events, and grooming masterclasses.</p>
+          <form id="newsletterForm" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="email" placeholder="Enter your email" required class="form-control" style="padding: 11px 14px; font-size: 0.88rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Join The Circle</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sovereign & Co. Bespoke Grooming Studio. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="faq.html" style="color: var(--text-dim);">Etiquette & Policy</a>
+          <a href="contact.html" style="color: var(--text-dim);">Studio Map</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Sidebar Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 style="font-size: 1.15rem;"><i class="fas fa-shopping-bag text-gold"></i> Grooming Satchel</h3>
+      <button id="closeCartBtn" style="background: none; border: none; color: var(--text-white); font-size: 1.2rem; cursor: pointer;">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div style="display: flex; gap: 8px; margin-bottom: 15px;">
+        <input type="text" id="promoCodeInput" placeholder="Enter Voucher Code" class="form-control" style="padding: 8px 12px; font-size: 0.8rem; text-transform: uppercase;">
+        <button id="applyPromoBtn" class="btn btn-secondary btn-sm">Apply</button>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px;">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$48.00</span>
+      </div>
+
+      <div id="cartDiscountRow" style="display: none; justify-content: space-between; font-size: 0.9rem; color: #10b981; margin-bottom: 6px;">
+        <span>Gentleman Privilege (15%)</span>
+        <span class="discount-value">-$7.20</span>
+      </div>
+
+      <div class="cart-total-row">
+        <strong style="color: var(--text-white);">Estimated Total</strong>
+        <strong class="text-gold" id="cartTotal" style="font-size: 1.3rem;">$48.00</strong>
+      </div>
+
+      <button id="checkoutBtn" class="btn btn-primary" style="width: 100%;">
+        <i class="fas fa-lock"></i> Secure Atelier Checkout
+      </button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

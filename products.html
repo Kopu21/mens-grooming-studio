@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sovereign Apothecary & Grooming Store</title>
+  <meta name="description" content="Shop small-batch organic beard oils, conditioning balms, sea salt styling clays, Damascus steel straight razors, and artisan colognes.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+  <header class="navbar-main">
+    <div class="container nav-container">
+      <!-- LEFT SIDE: New Professional Logo & Brand Name (Clickable to Home) -->
+      <a href="index.html" class="brand-logo" aria-label="Sovereign & Co. Home">
+        <div class="brand-crest-svg">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <path d="M24 3L42 10V22C42 33 24 45 24 45C24 45 6 33 6 22V10L24 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M15 17L33 31M33 17L15 31" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+            <path d="M24 9V14M24 34V39" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">SOVEREIGN &amp; CO.</span>
+          <span class="brand-subtitle">BARBERS &amp; BEARD ATELIER</span>
+        </div>
+      </a>
+
+      <!-- CENTER NAVIGATION (Exact Order: Home [Home 1, Home 2], About Us, Services [Haircuts, Beard Trims, Beard Styling, Hair Styling, Shaving, Grooming Packages], Products, Contact) -->
+      <nav class="nav-links-wrapper">
+        <ul class="nav-menu">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link ">Home <i class="fas fa-chevron-down nav-caret"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="home-1.html">Home 1</a></li>
+              <li><a href="home-2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link ">About Us</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link ">Services <i class="fas fa-chevron-down nav-caret"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#haircuts">Haircuts</a></li>
+              <li><a href="services.html#beard-trims">Beard Trims</a></li>
+              <li><a href="services.html#beard-styling">Beard Styling</a></li>
+              <li><a href="services.html#hair-styling">Hair Styling</a></li>
+              <li><a href="services.html#shaving">Shaving</a></li>
+              <li><a href="services.html#grooming-packages">Grooming Packages</a></li>
+            </ul>
+          </li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT SIDE: RTL / LTR toggle -> Dark Theme / Light Theme toggle -> Cart -> Book Chair -> Hamburger -->
+      <div class="nav-actions">
+        <button class="nav-control-btn dir-toggle-btn" title="Toggle RTL/LTR Direction" aria-label="Toggle Direction">
+          <i class="fas fa-right-left"></i> <span>RTL</span>
+        </button>
+        <button class="nav-control-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Dark/Light Theme">
+          <i class="fas fa-sun text-gold"></i>
+        </button>
+        <button class="nav-control-btn cart-toggle-btn" aria-label="Open Shopping Satchel">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge-count">1</span>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm book-chair-nav-btn">Book Chair</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header Banner -->
+  <section class="section-padding page-bg-backdrop" style="background-image: var(--overlay-banner), url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1600&q=80'); padding-top: 85px;">
+    <div class="container text-center">
+      <div class="section-subtitle">Small-Batch Dispensary</div>
+      <h1 class="section-title">The Sovereign Apothecary</h1>
+      <p class="section-desc">Handcrafted organic formulas, cold-pressed botanical carrier oils, and Japanese steel hardware.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- Category Filter Tabs -->
+      <div class="gallery-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Essentials</button>
+        <button class="filter-btn" data-filter="beard">Beard Care</button>
+        <button class="filter-btn" data-filter="hair">Hair Care & Styling</button>
+        <button class="filter-btn" data-filter="shave">Shaving Hardware</button>
+        <button class="filter-btn" data-filter="fragrance">Fine Fragrances</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+        <!-- P1: Beard Oil -->
+        <div class="product-card gallery-item" data-category="beard">
+          <div class="product-img-wrap">
+            <span class="product-tag">Best Seller</span>
+            <img src="images/black-amber-cedar-beard-oil.jpg" alt="Black Amber & Cedar Beard Oil" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Beard Care</div>
+            <h3 class="product-title">Black Amber & Cedar Beard Oil</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(142)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Golden jojoba, Moroccan argan, and smoky Virginia cedarwood for rich dermal moisture and soft facial wire.</p>
+            <div class="service-benefits-box" style="margin-bottom: 14px;">
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Eliminates beard itch & flaking</div>
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Rapid dermal follicle absorption</div>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span class="product-ingredient-tag">Argan</span>
+              <span class="product-ingredient-tag">Jojoba</span>
+              <span class="product-ingredient-tag">Cedarwood</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">$48.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p1" data-name="Black Amber & Cedar Beard Oil" data-title="Black Amber & Cedar Beard Oil" data-price="48" data-image="images/black-amber-cedar-beard-oil.jpg" data-img="images/black-amber-cedar-beard-oil.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2: Beard Balm -->
+        <div class="product-card gallery-item" data-category="beard">
+          <div class="product-img-wrap">
+            <span class="product-tag">All-Day Hold</span>
+            <img src="images/nordic-spruce-sculpting-balm.jpg" alt="Nordic Spruce Sculpting Balm" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Beard Styling</div>
+            <h3 class="product-title">Nordic Spruce Sculpting Balm</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(98)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Organic beeswax, unrefined shea butter, and pine resin to lock in volume and sculpt rogue flyaways.</p>
+            <div class="service-benefits-box" style="margin-bottom: 14px;">
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Medium pliable shaping control</div>
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Weather & wind barrier shield</div>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span class="product-ingredient-tag">Shea Butter</span>
+              <span class="product-ingredient-tag">Beeswax</span>
+              <span class="product-ingredient-tag">Pine Resin</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">$42.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p2" data-name="Nordic Spruce Sculpting Balm" data-title="Nordic Spruce Sculpting Balm" data-price="42" data-image="images/nordic-spruce-sculpting-balm.jpg" data-img="images/nordic-spruce-sculpting-balm.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- P3: Volcanic Sea Clay -->
+        <div class="product-card gallery-item" data-category="hair">
+          <div class="product-img-wrap">
+            <span class="product-tag">Zero Shine</span>
+            <img src="images/volcanic-sea-clay-pomade.jpg" alt="Volcanic Sea Clay Pomade" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Hair Styling</div>
+            <h3 class="product-title">Volcanic Sea Clay Pomade</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span>(115)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Bentonite clay and dead sea mineral salt for effortless gritty texture, high volume, and reworkable matte hold.</p>
+            <div class="service-benefits-box" style="margin-bottom: 14px;">
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> True zero-shine matte finish</div>
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> High all-day restructure hold</div>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span class="product-ingredient-tag">Bentonite</span>
+              <span class="product-ingredient-tag">Sea Salt</span>
+              <span class="product-ingredient-tag">Kaolin</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">$38.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p3" data-name="Volcanic Sea Clay Pomade" data-title="Volcanic Sea Clay Pomade" data-price="38" data-image="images/volcanic-sea-clay-pomade.jpg" data-img="images/volcanic-sea-clay-pomade.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- P4: Damascus Straight Razor -->
+        <div class="product-card gallery-item" data-category="shave">
+          <div class="product-img-wrap">
+            <span class="product-tag">Damascus Steel</span>
+            <img src="images/damascus-steel-straight-razor.jpg" alt="Damascus Straight Edge Razor" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Hardware</div>
+            <h3 class="product-title">Damascus Straight Edge Razor</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(76)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Hand-forged 67-layer Japanese steel with solid ebony handle and water-resistant leather travel sheath.</p>
+            <div class="service-benefits-box" style="margin-bottom: 14px;">
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Razor-sharp hollow ground edge</div>
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Lifetime craftsmanship guarantee</div>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span class="product-ingredient-tag">VG-10 Steel</span>
+              <span class="product-ingredient-tag">Ebony Wood</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">$110.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p4" data-name="Damascus Straight Edge Razor" data-title="Damascus Straight Edge Razor" data-price="110" data-image="images/damascus-steel-straight-razor.jpg" data-img="images/damascus-steel-straight-razor.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- P5: Smoked Oak Cologne -->
+        <div class="product-card gallery-item" data-category="fragrance">
+          <div class="product-img-wrap">
+            <span class="product-tag">Artisan Scent</span>
+            <img src="images/smoked-oak-bourbon-cologne.jpg" alt="Smoked Oak & Bourbon Extract" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Fine Fragrance</div>
+            <h3 class="product-title">Smoked Oak & Bourbon Extract</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(84)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Bespoke extrait de parfum featuring notes of barrel-aged whiskey, pipe tobacco, amber resin, and bergamot zest.</p>
+            <div class="service-benefits-box" style="margin-bottom: 14px;">
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> 14-Hour Longevity Silage</div>
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> 30% Pure Perfume Concentration</div>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span class="product-ingredient-tag">Bourbon Oak</span>
+              <span class="product-ingredient-tag">Tobacco</span>
+              <span class="product-ingredient-tag">Amber</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">$95.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p5" data-name="Smoked Oak & Bourbon Extract" data-title="Smoked Oak & Bourbon Extract" data-price="95" data-image="images/smoked-oak-bourbon-cologne.jpg" data-img="images/smoked-oak-bourbon-cologne.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- P6: Badger Shaving Brush -->
+        <div class="product-card gallery-item" data-category="shave">
+          <div class="product-img-wrap">
+            <span class="product-tag">Silvertip Grade</span>
+            <img src="images/silvertip-badger-shaving-brush.jpg" alt="Silvertip Shaving Brush & Stand" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Hardware</div>
+            <h3 class="product-title">Silvertip Shaving Brush & Stand</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(53)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Dense natural bristle knot mounted on solid turned brass for whipping thick protective lather.</p>
+            <div class="service-benefits-box" style="margin-bottom: 14px;">
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Ultra-soft natural tip feel</div>
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Heavy balanced chrome brass stand</div>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span class="product-ingredient-tag">Silvertip Badger</span>
+              <span class="product-ingredient-tag">Turned Brass</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">$70.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p6" data-name="Silvertip Shaving Brush & Stand" data-title="Silvertip Shaving Brush & Stand" data-price="70" data-image="images/silvertip-badger-shaving-brush.jpg" data-img="images/silvertip-badger-shaving-brush.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- P7: Organic Beard Wash -->
+        <div class="product-card gallery-item" data-category="beard">
+          <div class="product-img-wrap">
+            <span class="product-tag">Sulfate-Free</span>
+            <img src="images/unique-tea-tree-clarifying-beard-wash.jpg" alt="Tea Tree Clarifying Beard Wash with Peppermint & Essential Oils" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Beard Care</div>
+            <h3 class="product-title">Tea Tree Clarifying Beard Wash</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(67)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Gentle botanical cleansing lather that clarifies pollutants without stripping sensitive facial lipids.</p>
+            <div class="service-benefits-box" style="margin-bottom: 14px;">
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Antibacterial tea tree extract</div>
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Zero synthetic sulfates or parabens</div>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span class="product-ingredient-tag">Tea Tree</span>
+              <span class="product-ingredient-tag">Aloe Vera</span>
+              <span class="product-ingredient-tag">Peppermint</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">$34.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p7" data-name="Tea Tree Clarifying Beard Wash" data-title="Tea Tree Clarifying Beard Wash" data-price="34" data-image="images/unique-tea-tree-clarifying-beard-wash.jpg" data-img="images/unique-tea-tree-clarifying-beard-wash.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- P8: Sandalwood Shaving Cream Bowl -->
+        <div class="product-card gallery-item" data-category="shave">
+          <div class="product-img-wrap">
+            <span class="product-tag">Botanical Formula</span>
+            <img src="images/sandalwood-botanical-shave-cream.jpg" alt="Sandalwood Botanical Shave Cream" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Shaving Cream</div>
+            <h3 class="product-title">Sandalwood Botanical Shave Cream</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(91)</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Concentrated botanical shaving cream enriched with pure Mysore sandalwood oil and coconut lipids.</p>
+            <div class="service-benefits-box" style="margin-bottom: 14px;">
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Superior razor cushion glide</div>
+              <div class="service-benefit-item"><i class="fas fa-check-circle text-gold"></i> Soothing chamomile skin protection</div>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span class="product-ingredient-tag">Sandalwood</span>
+              <span class="product-ingredient-tag">Chamomile</span>
+              <span class="product-ingredient-tag">Coconut Butter</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">$36.00</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="p8" data-name="Sandalwood Botanical Shave Cream" data-title="Sandalwood Botanical Shave Cream" data-price="36" data-image="images/sandalwood-botanical-shave-cream.jpg" data-img="images/sandalwood-botanical-shave-cream.jpg">
+                <i class="fas fa-plus"></i> Add to Satchel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spotlight Feature 1: Black Amber & Cedar Beard Oil Formulation -->
+      <div class="product-spotlight-banner" style="margin-top: 60px;">
+        <img src="images/unique-signature-elixir-black-amber-cedar.jpg" alt="The Black Amber & Cedar Distinction Signature Elixir luxury beard oil bottle on cedarwood and amber resin" class="product-spotlight-img" loading="lazy">
+        <div class="product-spotlight-body">
+          <div class="section-subtitle" style="justify-content: flex-start;">Signature Elixir</div>
+          <h2 style="font-size: 2rem; margin-bottom: 15px;">The Black Amber & Cedar Distinction</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+            Unlike mass-produced beard oils loaded with cheap silicone and synthetic mineral fillers, our elixir is pressed from pure cold-pressed Moroccan argan and golden jojoba. Formulated to mimic natural human sebum, it absorbs instantly into the dermal layer to permanently eliminate beard itch and flaky skin.
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+            <div style="background: var(--bg-card-hover); padding: 15px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <h4 style="color: var(--gold-primary); font-size: 0.92rem; margin-bottom: 4px;">Top Notes</h4>
+              <p style="font-size: 0.82rem; color: var(--text-titanium);">Smoky Cedarwood & Bergamot</p>
+            </div>
+            <div style="background: var(--bg-card-hover); padding: 15px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <h4 style="color: var(--gold-primary); font-size: 0.92rem; margin-bottom: 4px;">Base Notes</h4>
+              <p style="font-size: 0.82rem; color: var(--text-titanium);">Black Amber & Leather</p>
+            </div>
+          </div>
+          <button class="btn btn-primary add-to-cart-btn" data-id="p1" data-name="Black Amber & Cedar Beard Oil" data-title="Black Amber & Cedar Beard Oil" data-price="48" data-image="images/unique-signature-elixir-black-amber-cedar.jpg" data-img="images/unique-signature-elixir-black-amber-cedar.jpg">
+            <i class="fas fa-shopping-bag"></i> Acquire Reserve Bottle ($48.00)
+          </button>
+        </div>
+      </div>
+
+      <!-- Spotlight Feature 2: Volcanic Sea Clay Pomade Formulation -->
+      <div class="product-spotlight-banner" style="margin-top: 40px;">
+        <div class="product-spotlight-body">
+          <div class="section-subtitle" style="justify-content: flex-start;">Texturizing Mineral Clay</div>
+          <h2 style="font-size: 2rem; margin-bottom: 15px;">Icelandic Volcanic Sea Clay Pomade</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+            Engineered for gentlemen desiring gravity-defying hold with a natural, light-absorbing matte finish. Microscopic volcanic ash particles cling to individual hair shafts to create immediate density and separated texture without stiff, crunchy flaking.
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+            <div style="background: var(--bg-card-hover); padding: 15px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <h4 style="color: var(--gold-primary); font-size: 0.92rem; margin-bottom: 4px;">Hold Level</h4>
+              <p style="font-size: 0.82rem; color: var(--text-titanium);">High Reworkable Hold (9/10)</p>
+            </div>
+            <div style="background: var(--bg-card-hover); padding: 15px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <h4 style="color: var(--gold-primary); font-size: 0.92rem; margin-bottom: 4px;">Finish</h4>
+              <p style="font-size: 0.82rem; color: var(--text-titanium);">True Matte / Zero Shine</p>
+            </div>
+          </div>
+          <button class="btn btn-primary add-to-cart-btn" data-id="p3" data-name="Volcanic Sea Clay Pomade" data-title="Volcanic Sea Clay Pomade" data-price="38" data-image="images/unique-icelandic-volcanic-sea-clay-pomade.jpg" data-img="images/unique-icelandic-volcanic-sea-clay-pomade.jpg">
+            <i class="fas fa-shopping-bag"></i> Acquire Matte Pomade ($38.00)
+          </button>
+        </div>
+        <img src="images/unique-icelandic-volcanic-sea-clay-pomade.jpg" alt="Icelandic Volcanic Sea Clay Pomade open jar on Icelandic lava rock with textured charcoal clay" class="product-spotlight-img" loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Purity Standards -->
+  <section class="section-padding-sm page-bg-backdrop" style="background: var(--bg-darkest); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box"><i class="fas fa-seedling"></i></div>
+          <h3 class="feature-title">100% Organic Botanicals</h3>
+          <p class="feature-desc">Zero sulfates, synthetic parabens, petroleum byproducts, or artificial colorants.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box"><i class="fas fa-mortar-pestle"></i></div>
+          <h3 class="feature-title">Cold-Pressed Small Batches</h3>
+          <p class="feature-desc">Blended and hand-poured in London in limited 250-bottle runs to preserve active enzymes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="feature-title">Amber UV Glass Shield</h3>
+          <p class="feature-desc">Bottled in medical-grade pharmaceutical UV amber glass to prevent oxidation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer with Clickable Brand Name Link to Home -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <!-- BRAND NAME IS A CLICKABLE LINK TO HOME (Mandatory Requirement) -->
+          <a href="index.html" class="footer-brand-link" aria-label="Return to Sovereign & Co. Home">
+            <div class="brand-crest-svg" style="width: 40px; height: 40px;">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                <path d="M24 3L42 10V22C42 33 24 45 24 45C24 45 6 33 6 22V10L24 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M15 17L33 31M33 17L15 31" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="font-size: 1.15rem;">SOVEREIGN &amp; CO.</span>
+              <span class="brand-subtitle" style="font-size: 0.58rem;">BARBERS &amp; BEARD ATELIER</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 25px;">
+            A bespoke sanctuary devoted to the mastery of the gentleman’s haircut, architectural beard sculpting, and restorative hot lather rituals.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Follow us on Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-btn--facebook" aria-label="Follow us on Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-btn--twitter" aria-label="Follow us on Twitter" title="Twitter / X"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-1.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <ul class="footer-links">
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="beard-care.html">Beard Sanctuary</a></li>
+            <li><a href="gallery.html">Visual Lookbook</a></li>
+            <li><a href="packages.html">VIP Memberships</a></li>
+            <li><a href="journal.html">Grooming Journal</a></li>
+            <li><a href="faq.html">Client FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>The Gentleman's Gazette</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 16px;">Subscribe for seasonal scent releases, private salon events, and grooming masterclasses.</p>
+          <form id="newsletterForm" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="email" placeholder="Enter your email" required class="form-control" style="padding: 11px 14px; font-size: 0.88rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Join The Circle</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sovereign & Co. Bespoke Grooming Studio. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="faq.html" style="color: var(--text-dim);">Etiquette & Policy</a>
+          <a href="contact.html" style="color: var(--text-dim);">Studio Map</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Sidebar Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 style="font-size: 1.15rem;"><i class="fas fa-shopping-bag text-gold"></i> Grooming Satchel</h3>
+      <button id="closeCartBtn" style="background: none; border: none; color: var(--text-white); font-size: 1.2rem; cursor: pointer;"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items-list" id="cartItemsList"></div>
+    <div class="cart-footer">
+      <div style="display: flex; gap: 8px; margin-bottom: 15px;">
+        <input type="text" id="promoCodeInput" placeholder="Voucher Code" class="form-control" style="padding: 8px 12px; font-size: 0.8rem;">
+        <button id="applyPromoBtn" class="btn btn-secondary btn-sm">Apply</button>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 6px;">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$48.00</span>
+      </div>
+      <div id="cartDiscountRow" style="display: none; justify-content: space-between; font-size: 0.9rem; color: #10b981; margin-bottom: 6px;">
+        <span>Discount (15%)</span>
+        <span class="discount-value">-$7.20</span>
+      </div>
+      <div class="cart-total-row">
+        <strong style="color: var(--text-white);">Estimated Total</strong>
+        <strong class="text-gold" id="cartTotal" style="font-size: 1.3rem;">$48.00</strong>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary" style="width: 100%;"><i class="fas fa-lock"></i> Secure Checkout</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

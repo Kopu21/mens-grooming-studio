@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Mayfair Atelier | SOVEREIGN & CO.</title>
+  <meta name="description" content="Visit Sovereign & Co. Mayfair Atelier. Find studio hours, valet parking information, concierge contacts, and appointment booking form.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+  <header class="navbar-main">
+    <div class="container nav-container">
+      <!-- LEFT SIDE: New Professional Logo & Brand Name (Clickable to Home) -->
+      <a href="index.html" class="brand-logo" aria-label="Sovereign & Co. Home">
+        <div class="brand-crest-svg">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <path d="M24 3L42 10V22C42 33 24 45 24 45C24 45 6 33 6 22V10L24 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M15 17L33 31M33 17L15 31" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+            <path d="M24 9V14M24 34V39" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">SOVEREIGN &amp; CO.</span>
+          <span class="brand-subtitle">BARBERS &amp; BEARD ATELIER</span>
+        </div>
+      </a>
+
+      <!-- CENTER NAVIGATION (Exact Order: Home [Home 1, Home 2], About Us, Services [Haircuts, Beard Trims, Beard Styling, Hair Styling, Shaving, Grooming Packages], Products, Contact) -->
+      <nav class="nav-links-wrapper">
+        <ul class="nav-menu">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link ">Home <i class="fas fa-chevron-down nav-caret"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="home-1.html">Home 1</a></li>
+              <li><a href="home-2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link ">About Us</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link ">Services <i class="fas fa-chevron-down nav-caret"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#haircuts">Haircuts</a></li>
+              <li><a href="services.html#beard-trims">Beard Trims</a></li>
+              <li><a href="services.html#beard-styling">Beard Styling</a></li>
+              <li><a href="services.html#hair-styling">Hair Styling</a></li>
+              <li><a href="services.html#shaving">Shaving</a></li>
+              <li><a href="services.html#grooming-packages">Grooming Packages</a></li>
+            </ul>
+          </li>
+          <li><a href="products.html" class="nav-link ">Products</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT SIDE: RTL / LTR toggle -> Dark Theme / Light Theme toggle -> Cart -> Book Chair -> Hamburger -->
+      <div class="nav-actions">
+        <button class="nav-control-btn dir-toggle-btn" title="Toggle RTL/LTR Direction" aria-label="Toggle Direction">
+          <i class="fas fa-right-left"></i> <span>RTL</span>
+        </button>
+        <button class="nav-control-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Dark/Light Theme">
+          <i class="fas fa-sun text-gold"></i>
+        </button>
+        <button class="nav-control-btn cart-toggle-btn" aria-label="Open Shopping Satchel">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge-count">1</span>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm book-chair-nav-btn">Book Chair</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section-padding page-bg-backdrop" style="background-image: var(--overlay-banner), url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80'); padding-top: 85px;">
+    <div class="container text-center">
+      <div class="section-subtitle">Location & Concierge</div>
+      <h1 class="section-title">The Mayfair Studio Atelier</h1>
+      <p class="section-desc">Located in the historic heart of Mayfair, offering a private enclave for discerning gentlemen.</p>
+    </div>
+  </section>
+
+  <!-- Contact Details & Comprehensive Booking / Enquiry Form -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left Column: Details & Map -->
+        <div class="contact-info-card">
+          <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--gold-primary);">Atelier Information</h2>
+          
+          <div class="contact-detail-row">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Atelier Address</h4>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+                442 St. James Boulevard<br>
+                Mayfair Heritage District, Suite 100<br>
+                London, W1J 8AQ
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail-row">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Studio Hours</h4>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+                <strong>Tuesday – Friday:</strong> 9:00 AM – 8:00 PM<br>
+                <strong>Saturday:</strong> 8:30 AM – 7:00 PM<br>
+                <strong>Sunday:</strong> 10:00 AM – 5:00 PM<br>
+                <span style="color: var(--gold-primary);">Monday: Private Guild Buyouts</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail-row">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Direct Phone & Email</h4>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+                Telephone: +1 (800) 768-3734<br>
+                VIP WhatsApp: +1 (800) 768-3735<br>
+                Email: concierge@sovereigngrooming.com
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail-row" style="margin-bottom: 25px;">
+            <div class="contact-icon"><i class="fas fa-car"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Arrival & Valet Parking</h4>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+                Complimentary white-glove valet parking is located directly at the St. James front portico.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stylized Map / Location Visualization Box -->
+          <div style="background: var(--bg-dark); border: 1px solid var(--border-gold); border-radius: var(--radius-sm); overflow: hidden; padding: 16px; text-align: center; margin-top: 10px;">
+            <div style="width: 100%; height: 210px; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 14px; border: 1px solid var(--border-subtle);">
+              <iframe
+                title="Sovereign & Co. Mayfair Atelier Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.2536894371457!2d-0.14441552342371978!3d51.50854491062947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d55b6ef4ef%3A0x63391d1e43e1d13f!2sSt%20James's%20St%2C%20London%20SW1A%201HD%2C%20UK!5e0!3m2!1sen!2suk!4v1718000000000!5m2!1sen!2suk"
+                width="100%"
+                height="100%"
+                style="border:0; filter: contrast(1.05) saturate(1.1);"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <i class="fas fa-compass text-gold" style="font-size: 1.4rem; margin-bottom: 6px; display: inline-block;"></i>
+            <h4 style="font-size: 1.05rem; margin-bottom: 4px; font-family: var(--font-serif); font-weight: 700;">Mayfair Heritage District Enclave</h4>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5;">442 St. James Boulevard, Mayfair, London, W1J 8AQ</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=St+James's+Street+Mayfair+London+W1J" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%;">
+              <i class="fas fa-location-arrow"></i> Open in Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Full Booking & Enquiry Form -->
+        <div class="contact-form-box">
+          <h2 style="font-size: 1.8rem; margin-bottom: 8px;">Appointment Booking & Inquiry</h2>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 25px;">
+            Reserve your chair directly or inquire for private atelier buyouts and wedding parties.
+          </p>
+
+          <form id="contactStudioForm" style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> Full Name *</label>
+              <input type="text" id="contactFullName" name="fullName" required class="form-control" placeholder="e.g. Harrison Bennett" autocomplete="name">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Email Address *</label>
+                <input type="email" id="contactEmail" name="email" required class="form-control" placeholder="harrison@domain.com" autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-phone"></i> Phone Number *</label>
+                <input type="tel" id="contactPhone" name="phone" inputmode="numeric" pattern="[0-9]*" required class="form-control" placeholder="e.g. 9876543210" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fas fa-scissors"></i> Preferred Service *</label>
+              <select class="form-control" required>
+                <option value="Master Signature Haircut ($65)">Master Signature Haircut ($65)</option>
+                <option value="Architectural Beard Sculpt ($50)">Architectural Beard Sculpt ($50)</option>
+                <option value="Royal Hot Lather Razor Shave ($55)">Royal Hot Lather Razor Shave ($55)</option>
+                <option value="The Sovereign Executive Combo ($120)">The Sovereign Executive Combo ($120)</option>
+                <option value="Japanese Scalp Detox & Clay Mask ($75)">Japanese Scalp Detox & Clay Mask ($75)</option>
+                <option value="Private Groomsmen / Wedding Buyout">Private Groomsmen / Wedding Buyout</option>
+                <option value="General Concierge Inquiry">General Concierge Inquiry</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label><i class="fas fa-calendar-alt"></i> Preferred Date *</label>
+                <input type="date" required class="form-control" value="2026-10-15">
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-clock"></i> Preferred Time *</label>
+                <select class="form-control" required>
+                  <option value="09:30 AM">09:30 AM</option>
+                  <option value="10:15 AM">10:15 AM</option>
+                  <option value="11:00 AM" selected>11:00 AM</option>
+                  <option value="01:30 PM">01:30 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:30 PM">04:30 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fas fa-comment-alt"></i> Message / Special Grooming Requirements</label>
+              <textarea rows="4" class="form-control" placeholder="Specify preferred master barber, beverage choice (whiskey/espresso), or sensitive skin notes..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 10px;">
+              <i class="fas fa-calendar-check"></i> Book Appointment Now
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer with Clickable Brand Name Link to Home -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <!-- BRAND NAME IS A CLICKABLE LINK TO HOME (Mandatory Requirement) -->
+          <a href="index.html" class="footer-brand-link" aria-label="Return to Sovereign & Co. Home">
+            <div class="brand-crest-svg" style="width: 40px; height: 40px;">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                <path d="M24 3L42 10V22C42 33 24 45 24 45C24 45 6 33 6 22V10L24 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M15 17L33 31M33 17L15 31" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="font-size: 1.15rem;">SOVEREIGN &amp; CO.</span>
+              <span class="brand-subtitle" style="font-size: 0.58rem;">BARBERS &amp; BEARD ATELIER</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 25px;">
+            A bespoke sanctuary devoted to the mastery of the gentleman’s haircut, architectural beard sculpting, and restorative hot lather rituals.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Follow us on Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-btn--facebook" aria-label="Follow us on Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-btn--twitter" aria-label="Follow us on Twitter" title="Twitter / X"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-1.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <ul class="footer-links">
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="beard-care.html">Beard Sanctuary</a></li>
+            <li><a href="gallery.html">Visual Lookbook</a></li>
+            <li><a href="packages.html">VIP Memberships</a></li>
+            <li><a href="journal.html">Grooming Journal</a></li>
+            <li><a href="faq.html">Client FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>The Gentleman's Gazette</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 16px;">Subscribe for seasonal scent releases, private salon events, and grooming masterclasses.</p>
+          <form id="newsletterForm" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="email" placeholder="Enter your email" required class="form-control" style="padding: 11px 14px; font-size: 0.88rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Join The Circle</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sovereign & Co. Bespoke Grooming Studio. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="faq.html" style="color: var(--text-dim);">Etiquette & Policy</a>
+          <a href="contact.html" style="color: var(--text-dim);">Studio Map</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Sidebar Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 style="font-size: 1.15rem;"><i class="fas fa-shopping-bag text-gold"></i> Grooming Satchel</h3>
+      <button id="closeCartBtn" style="background: none; border: none; color: var(--text-white); font-size: 1.2rem; cursor: pointer;"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items-list" id="cartItemsList"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <strong style="color: var(--text-white);">Estimated Total</strong>
+        <strong class="text-gold" id="cartTotal" style="font-size: 1.3rem;">$48.00</strong>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary" style="width: 100%;"><i class="fas fa-lock"></i> Secure Checkout</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
