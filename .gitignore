@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Scratch scripts and temporary test files
+*.log
+scratch_*.jpg
+check_*.js
+inspect_*.js
+test_*.js
+verify_*.js
+download_*.js
+audit_*.js
+fetch_*.js
+apply_*.js
+fix_*.js
+list_*.js
+update_*.js
+final_*.js
+revert_*.js
+search_*.js
+find_*.js
