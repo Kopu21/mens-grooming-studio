@@ -842,7 +842,7 @@ img {
    ========================================================================== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
@@ -1386,7 +1386,8 @@ img {
   border-left: 1px solid var(--border-gold);
   z-index: 2001;
   transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
   display: flex;
   flex-direction: column;
   box-shadow: -15px 0 40px rgba(0, 0, 0, 0.8);
@@ -1394,6 +1395,7 @@ img {
 
 .cart-drawer.active {
   transform: translateX(0);
+  visibility: visible;
 }
 
 .cart-header {
@@ -1649,10 +1651,12 @@ img {
   border-left: none;
   border-right: 1px solid var(--border-gold);
   transform: translateX(-100%);
+  visibility: hidden;
 }
 
 [dir="rtl"] .cart-drawer.active {
   transform: translateX(0);
+  visibility: visible;
 }
 
 [dir="rtl"] .cart-badge-count {
@@ -1921,6 +1925,70 @@ img {
   .nav-actions {
     gap: 8px;
   }
+
+  .quick-booking-bar {
+    margin-top: 24px !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .booking-strip-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .booking-strip-form .form-group {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .booking-strip-form .form-control {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-height: 48px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .booking-strip-form button[type="submit"],
+  .booking-strip-form .btn {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.92rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    margin-top: 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .service-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .split-feature > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2014,6 +2082,24 @@ img {
   .book-chair-nav-btn {
     display: none;
   }
+
+  .quick-booking-bar {
+    padding: 20px 16px !important;
+  }
+
+  .booking-strip-form {
+    gap: 14px !important;
+  }
+
+  .booking-strip-form .form-control {
+    font-size: 0.88rem !important;
+  }
+
+  .booking-strip-form button[type="submit"],
+  .booking-strip-form .btn {
+    height: 48px !important;
+    font-size: 0.88rem !important;
+  }
 }
 
 @media (max-width: 360px) {
@@ -2053,6 +2139,25 @@ img {
     height: 38px;
     min-height: 38px;
     font-size: 0.95rem;
+  }
+
+  .quick-booking-bar {
+    padding: 16px 12px !important;
+  }
+
+  .booking-strip-form {
+    gap: 12px !important;
+  }
+
+  .booking-strip-form .form-control {
+    padding: 10px 12px !important;
+    font-size: 0.84rem !important;
+  }
+
+  .booking-strip-form button[type="submit"],
+  .booking-strip-form .btn {
+    height: 46px !important;
+    font-size: 0.84rem !important;
   }
 }
 
@@ -2109,6 +2214,26 @@ img {
 
   .hero-title {
     font-size: 1.65rem;
+  }
+
+  .quick-booking-bar {
+    padding: 14px 10px !important;
+    margin-top: 15px !important;
+  }
+
+  .booking-strip-form {
+    gap: 10px !important;
+  }
+
+  .booking-strip-form .form-control {
+    padding: 8px 10px !important;
+    font-size: 0.82rem !important;
+  }
+
+  .booking-strip-form button[type="submit"],
+  .booking-strip-form .btn {
+    height: 44px !important;
+    font-size: 0.82rem !important;
   }
 }
 
