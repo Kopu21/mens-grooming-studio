@@ -122,6 +122,10 @@ body {
     var(--page-pattern);
   background-size: 100% 100%, 100% 100%, 32px 32px;
   transition: background-color var(--transition-smooth), color var(--transition-smooth);
+  padding-top: 82px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-bg-backdrop {
@@ -331,9 +335,10 @@ img {
 }
 
 .navbar-main {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 82px;
   background: var(--bg-glass-heavy);
@@ -1516,6 +1521,9 @@ img {
   border-top: 1px solid var(--border-subtle);
   padding: 70px 0 25px 0;
   color: var(--text-muted);
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
 }
 
 .footer-grid {

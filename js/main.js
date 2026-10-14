@@ -273,7 +273,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
-        if (window.scrollY > 20) {
+        const scrollOffset = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollOffset > 20) {
           navbar?.classList.add('scrolled');
         } else {
           navbar?.classList.remove('scrolled');
