@@ -276,13 +276,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  // Mobile Menu Toggle
+  // Mobile Menu Toggle & Utility Injection
   const mobileToggle = document.querySelector('.mobile-menu-toggle');
   const navWrapper = document.querySelector('.nav-links-wrapper');
   if (mobileToggle && navWrapper) {
+    // Inject mobile drawer utility row if not present
+    if (!navWrapper.querySelector('.mobile-drawer-utilities')) {
+      const utilDiv = document.createElement('div');
+      utilDiv.className = 'mobile-drawer-utilities';
+      utilDiv.innerHTML = `
+        <div class="mobile-util-title">Quick Settings & Reservation</div>
+        <div class="mobile-util-row">
+          <button class="nav-control-btn dir-toggle-btn" title="Toggle RTL/LTR Direction" aria-label="Toggle Direction">
+            <i class="fas fa-right-left"></i> <span>RTL</span>
+          </button>
+          <button class="nav-control-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Dark/Light Theme">
+            <i class="fas fa-sun text-gold"></i>
+          </button>
+          <a href="booking.html" class="btn btn-primary btn-sm"><i class="fas fa-calendar-check"></i> Book Chair</a>
+        </div>
+      `;
+      navWrapper.appendChild(utilDiv);
+      ThemeManager.updateThemeUI(document.documentElement.getAttribute('data-theme') || 'dark');
+      DirectionManager.updateToggleText(document.documentElement.getAttribute('dir') || 'ltr');
+    }
+
     const toggleMenu = (isOpen) => {
       const active = typeof isOpen === 'boolean' ? isOpen : !navWrapper.classList.contains('active');
       navWrapper.classList.toggle('active', active);
+      if (active) {
+        navWrapper.scrollTop = 0;
+      }
+      document.body.style.overflow = active ? 'hidden' : '';
       mobileToggle.setAttribute('aria-expanded', active ? 'true' : 'false');
       mobileToggle.innerHTML = active 
         ? '<i class="fas fa-times"></i>' 
@@ -295,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close menu when clicking link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
+    document.querySelectorAll('.nav-menu a, .mobile-drawer-utilities a').forEach(link => {
       link.addEventListener('click', () => {
         toggleMenu(false);
       });

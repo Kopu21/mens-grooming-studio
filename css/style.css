@@ -341,8 +341,6 @@ img {
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
   z-index: 1000;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -356,7 +354,9 @@ img {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  gap: 16px;
+  gap: 12px;
+  width: 100%;
+  max-width: 1280px;
 }
 
 /* LEFT SIDE: New Professional Logo + Brand Name */
@@ -1723,13 +1723,15 @@ img {
     width: 100%;
     height: calc(100vh - 82px);
     background: var(--bg-darkest);
-    padding: 30px 24px 60px 24px;
+    padding: 24px 20px 60px 20px;
     transform: translateX(-100%);
     visibility: hidden;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
     border-top: 1px solid var(--border-subtle);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 999;
+    display: block !important;
   }
 
   [data-theme="light"] .nav-links-wrapper {
@@ -1835,6 +1837,34 @@ img {
   .contact-layout {
     grid-template-columns: 1fr;
   }
+
+  /* Mobile Drawer Bottom Utilities */
+  .mobile-drawer-utilities {
+    display: block;
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .mobile-util-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold-primary);
+    margin-bottom: 12px;
+  }
+
+  .mobile-util-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .mobile-util-row .nav-control-btn {
+    display: inline-flex !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1890,21 +1920,43 @@ img {
 
 @media (max-width: 600px) {
   .nav-container {
-    padding: 0 16px;
-    gap: 10px;
+    padding: 0 14px;
+    gap: 8px;
   }
 
   .nav-actions {
-    gap: 6px;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 0;
   }
 
-  .nav-control-btn.dir-toggle-btn span {
-    display: none;
+  [dir="rtl"] .nav-actions {
+    margin-left: 0;
+    margin-right: auto;
   }
 
-  .nav-control-btn.dir-toggle-btn {
-    width: 44px;
-    padding: 0;
+  /* Hide header RTL & Theme toggles on narrow mobile - they are accessible in expanded menu */
+  .nav-actions .dir-toggle-btn,
+  .nav-actions .theme-toggle-btn {
+    display: none !important;
+  }
+
+  .brand-logo {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  .brand-text {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* Automatically stack multi-column card/form grids cleanly on mobile */
@@ -1915,24 +1967,24 @@ img {
 
 @media (max-width: 480px) {
   .brand-title {
-    font-size: 1.02rem;
-    letter-spacing: 0.08em;
+    font-size: 0.98rem;
+    letter-spacing: 0.06em;
   }
 
   .brand-subtitle {
-    font-size: 0.52rem;
-    letter-spacing: 0.18em;
+    font-size: 0.5rem;
+    letter-spacing: 0.16em;
   }
 
   .brand-crest-svg {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    padding: 4px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    padding: 3px;
   }
 
   .hero-title {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
   }
 
   .hero-stats {
@@ -1966,12 +2018,12 @@ img {
   }
 
   .brand-logo {
-    gap: 8px;
+    gap: 7px;
   }
 
   .brand-title {
-    font-size: 0.92rem;
-    letter-spacing: 0.04em;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
   }
 
   .brand-subtitle {
@@ -1979,17 +2031,16 @@ img {
   }
 
   .brand-crest-svg {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
-    padding: 3px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    padding: 2px;
   }
 
   .nav-actions {
-    gap: 4px;
+    gap: 6px;
   }
 
-  .nav-control-btn,
   .cart-toggle-btn,
   .mobile-menu-toggle {
     width: 38px;
@@ -2007,26 +2058,25 @@ img {
   }
 
   .brand-logo {
-    gap: 6px;
+    gap: 5px;
   }
 
   .brand-title {
-    font-size: 0.85rem;
-    letter-spacing: 0.02em;
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
   }
 
   .brand-crest-svg {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
     padding: 2px;
   }
 
   .nav-actions {
-    gap: 3px;
+    gap: 4px;
   }
 
-  .nav-control-btn,
   .cart-toggle-btn,
   .mobile-menu-toggle {
     width: 34px;
