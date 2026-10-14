@@ -642,6 +642,11 @@ img {
   color: var(--gold-primary);
 }
 
+/* Mobile Drawer Bottom Utilities (Strictly hidden on desktop to avoid duplicate navbar controls) */
+.mobile-drawer-utilities {
+  display: none !important;
+}
+
 /* Smooth anchor targeting */
 [id] {
   scroll-margin-top: 100px;
@@ -1840,7 +1845,7 @@ img {
 
   /* Mobile Drawer Bottom Utilities */
   .mobile-drawer-utilities {
-    display: block;
+    display: block !important;
     margin-top: 26px;
     padding-top: 20px;
     border-top: 1px solid var(--border-subtle);
@@ -2104,6 +2109,79 @@ img {
 
   .hero-title {
     font-size: 1.65rem;
+  }
+}
+
+/* ==========================================================================
+   Large Desktop & Ultra-Wide Scaling (1440px, 1920px, 2560px 4K)
+   ========================================================================== */
+@media (min-width: 1440px) {
+  .nav-container {
+    max-width: 1380px;
+    padding: 0 32px;
+    gap: 24px;
+  }
+
+  .nav-menu {
+    gap: 28px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .nav-container {
+    max-width: 1600px;
+    padding: 0 40px;
+    gap: 36px;
+  }
+
+  .nav-menu {
+    gap: 36px;
+  }
+
+  .nav-link {
+    font-size: 0.92rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .nav-container {
+    max-width: 1920px;
+    padding: 0 56px;
+    gap: 48px;
+  }
+
+  .brand-crest-svg {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+
+  .brand-title {
+    font-size: 1.45rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .nav-menu {
+    gap: 48px;
+  }
+
+  .nav-link {
+    font-size: 1.02rem;
+    letter-spacing: 0.12em;
+  }
+
+  .nav-actions {
+    gap: 16px;
+  }
+
+  .nav-control-btn,
+  .book-chair-nav-btn {
+    height: 48px;
+    min-height: 48px;
+    font-size: 0.88rem;
   }
 }
 

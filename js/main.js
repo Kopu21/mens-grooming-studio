@@ -37,6 +37,10 @@ const ThemeManager = {
     });
   },
 
+  updateThemeUI(theme) {
+    this.updateToggleIcons(theme);
+  },
+
   bindEvents() {
     document.addEventListener('click', (e) => {
       if (e.target.closest('.theme-toggle-btn')) {
@@ -77,6 +81,10 @@ const DirectionManager = {
       btn.setAttribute('title', `Switch to ${dir === 'ltr' ? 'RTL' : 'LTR'} layout`);
       btn.setAttribute('aria-label', `Switch to ${dir === 'ltr' ? 'RTL' : 'LTR'} layout`);
     });
+  },
+
+  updateDirectionUI(dir) {
+    this.updateToggleText(dir);
   },
 
   bindEvents() {
