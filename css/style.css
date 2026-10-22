@@ -1197,9 +1197,30 @@ img {
    ========================================================================== */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
   align-items: stretch;
+}
+
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 .product-card {
@@ -1211,6 +1232,8 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .product-card:hover {
@@ -1221,9 +1244,11 @@ img {
 
 .product-img-wrap {
   position: relative;
-  height: 270px;
+  width: 100%;
+  height: 250px;
   background: #11141a;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .product-img-wrap img {
@@ -1231,6 +1256,7 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
   transition: transform 0.5s ease;
 }
 
@@ -4101,5 +4127,161 @@ img {
     max-width: 380px !important;
   }
 }
+
+/* ==========================================================================
+   Products & Gallery - Category Filter Navigation Bar
+   ========================================================================== */
+.gallery-filter-bar {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin: 0 auto 40px auto !important;
+  max-width: 900px !important;
+  padding: 0 10px !important;
+}
+
+.filter-btn {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-gold) !important;
+  color: var(--text-titanium) !important;
+  padding: 10px 22px !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.86rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  border-radius: var(--radius-full) !important;
+  cursor: pointer !important;
+  transition: var(--transition-smooth) !important;
+  outline: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.filter-btn:hover {
+  border-color: var(--gold-primary) !important;
+  color: var(--gold-primary) !important;
+  background: var(--bg-card-hover) !important;
+  transform: translateY(-2px) !important;
+}
+
+.filter-btn.active {
+  background: var(--gold-gradient) !important;
+  color: #0b0d11 !important;
+  border-color: var(--gold-primary) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35) !important;
+}
+
+[data-theme="light"] .filter-btn {
+  background: #ffffff !important;
+  border-color: rgba(179, 134, 11, 0.45) !important;
+  color: #1f2937 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] .filter-btn:hover {
+  border-color: var(--gold-primary) !important;
+  color: #8c6703 !important;
+  background: #fdfbf7 !important;
+}
+
+[data-theme="light"] .filter-btn.active {
+  background: var(--gold-gradient) !important;
+  color: #000000 !important;
+  border-color: var(--gold-primary) !important;
+}
+
+[data-theme="light"] .product-ingredient-tag {
+  background: #fdfbf7 !important;
+  border-color: rgba(179, 134, 11, 0.45) !important;
+  color: #8c6703 !important;
+}
+
+/* ==========================================================================
+   Products Page - Purity Standards Bottom Section
+   ========================================================================== */
+.products-purity-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+.products-purity-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 24px 20px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+  transition: var(--transition-smooth) !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.products-purity-card:hover {
+  border-color: var(--border-gold) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: var(--shadow-card), var(--shadow-gold) !important;
+}
+
+.products-purity-icon-box {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  background: rgba(212, 175, 55, 0.1) !important;
+  border: 1px solid var(--border-gold) !important;
+  border-radius: var(--radius-sm) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--gold-primary) !important;
+  font-size: 1.15rem !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+}
+
+.products-purity-content {
+  flex: 1 !important;
+}
+
+.products-purity-title {
+  font-family: var(--font-heading) !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 6px !important;
+  color: var(--text-white) !important;
+  line-height: 1.35 !important;
+}
+
+.products-purity-desc {
+  font-size: 0.86rem !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .products-purity-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-purity-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+
 
 
