@@ -3553,3 +3553,245 @@ img {
   color: var(--gold-primary) !important;
   text-decoration: underline !important;
 }
+
+/* ==========================================================================
+   Targeted Home Page: Featured Grooming Services (3 Columns x 2 Rows Desktop)
+   & Compact Spacing (Zero Excess Empty Space)
+   ========================================================================== */
+.home-services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+.home-services-grid .service-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.home-services-grid .service-img-wrap {
+  position: relative !important;
+  height: 200px !important;
+  min-height: 200px !important;
+  max-height: 200px !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  background: #11141a !important;
+  flex-shrink: 0 !important;
+}
+
+.home-services-grid .service-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.home-services-grid .service-badge-price {
+  position: absolute !important;
+  bottom: 12px !important;
+  right: 12px !important;
+  background: var(--bg-glass-heavy) !important;
+  border: 1px solid var(--gold-primary) !important;
+  color: var(--gold-primary) !important;
+  padding: 4px 12px !important;
+  font-family: var(--font-serif) !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  border-radius: var(--radius-sm) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+[dir="rtl"] .home-services-grid .service-badge-price {
+  right: auto !important;
+  left: 12px !important;
+}
+
+.home-services-grid .service-body {
+  padding: 16px 18px 18px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  box-sizing: border-box !important;
+}
+
+.home-services-grid .service-meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 8px !important;
+  font-size: 0.78rem !important;
+  color: var(--text-dim) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 600 !important;
+}
+
+.home-services-grid .service-title {
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  line-height: 1.3 !important;
+  color: var(--text-white) !important;
+  min-height: 1.4em !important;
+}
+
+.home-services-grid .service-desc {
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 14px !important;
+  flex-grow: 1 !important;
+}
+
+.home-services-grid .service-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 12px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  margin-top: auto !important;
+}
+
+/* Responsive Breakpoints for Home Services Grid */
+@media (max-width: 1023px) and (min-width: 641px) {
+  .home-services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  .home-services-grid .service-img-wrap {
+    height: 190px !important;
+    min-height: 190px !important;
+    max-height: 190px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .home-services-grid .service-img-wrap {
+    height: 180px !important;
+    min-height: 180px !important;
+    max-height: 180px !important;
+  }
+  .home-services-grid .service-body {
+    padding: 14px 16px 16px 16px !important;
+  }
+}
+
+/* ==========================================================================
+   Targeted Home Page: Medium Size Footer
+   ========================================================================== */
+.home-footer.footer-main {
+  padding: 38px 0 16px 0 !important;
+  margin-top: auto !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  background: var(--bg-darkest) !important;
+  position: relative !important;
+  z-index: 10 !important;
+  width: 100% !important;
+}
+
+.home-footer .footer-grid {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr !important;
+  gap: 24px !important;
+  margin-bottom: 22px !important;
+}
+
+.home-footer .footer-brand-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.home-footer .footer-col > p {
+  font-size: 0.86rem !important;
+  line-height: 1.55 !important;
+  margin-bottom: 12px !important;
+}
+
+.home-footer .footer-social-btn {
+  width: 34px !important;
+  height: 34px !important;
+  font-size: 0.88rem !important;
+}
+
+.home-footer .footer-contact-details {
+  margin-top: 10px !important;
+  font-size: 0.82rem !important;
+  line-height: 1.5 !important;
+}
+
+.home-footer .footer-contact-details p {
+  margin-bottom: 4px !important;
+}
+
+.home-footer .footer-col h4 {
+  font-size: 0.96rem !important;
+  margin-bottom: 12px !important;
+}
+
+.home-footer .footer-col h4::after {
+  bottom: -2px !important;
+  width: 22px !important;
+}
+
+.home-footer .footer-links {
+  gap: 6px !important;
+}
+
+.home-footer .footer-links a {
+  font-size: 0.83rem !important;
+}
+
+.home-footer .footer-bottom {
+  border-top: 1px solid var(--border-subtle) !important;
+  padding-top: 14px !important;
+  font-size: 0.8rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+}
+
+@media (max-width: 991px) {
+  .home-footer.footer-main {
+    padding: 30px 0 16px 0 !important;
+  }
+  .home-footer .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-footer.footer-main {
+    padding: 24px 0 14px 0 !important;
+  }
+  .home-footer .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-bottom: 16px !important;
+  }
+  .home-footer .footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding-top: 12px !important;
+  }
+}
+
