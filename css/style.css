@@ -1099,16 +1099,16 @@ img {
 /* Split Feature */
 .split-feature {
   display: grid;
-  grid-template-columns: 420px 1fr;
-  max-width: 1040px;
+  grid-template-columns: 1.15fr 0.85fr;
+  max-width: 1140px;
   margin: 0 auto;
-  gap: 42px;
+  gap: 48px;
   align-items: center;
 }
 
 .split-feature-img-box {
   position: relative;
-  max-width: 420px;
+  max-width: 460px;
   width: 100%;
   margin: 0 auto;
 }
@@ -1125,27 +1125,32 @@ img {
 
 .split-floating-card {
   position: absolute;
-  bottom: -15px;
-  left: -15px;
+  bottom: 16px;
+  left: 16px;
   background: var(--bg-card);
   border: 1px solid var(--gold-primary);
-  padding: 14px 18px;
+  padding: 10px 16px;
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-card), var(--shadow-gold);
-  max-width: 240px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), var(--shadow-gold);
+  max-width: 200px;
   backdrop-filter: blur(10px);
 }
 
 .split-floating-card h4 {
-  font-size: 1.8rem;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: var(--gold-primary);
   margin-bottom: 2px;
 }
 
 .split-floating-card p {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
+  line-height: 1.4;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--text-titanium);
 }
 
@@ -3794,4 +3799,307 @@ img {
     padding-top: 12px !important;
   }
 }
+
+/* ==========================================================================
+   Home Page - Client Endorsements Grid Alignment
+   ========================================================================== */
+.endorsements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.endorsement-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 32px 28px;
+  border-radius: var(--radius-md);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: var(--transition-smooth);
+}
+
+.endorsement-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-card), var(--shadow-gold);
+}
+
+.endorsement-stars {
+  color: var(--gold-primary);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 4px;
+}
+
+.endorsement-quote {
+  font-style: italic;
+  color: var(--text-titanium);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.endorsement-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.endorsement-avatar {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.endorsement-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.endorsement-name {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.endorsement-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .endorsements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .endorsements-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ==========================================================================
+   About Us - The Four Pillars Symbol & Text Alignment
+   ========================================================================== */
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.about-pillar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 26px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: var(--transition-smooth);
+}
+
+.about-pillar-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card), var(--shadow-gold);
+}
+
+.about-pillar-icon-box {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.about-pillar-content {
+  flex: 1;
+}
+
+.about-pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  color: var(--text-white);
+}
+
+.about-pillar-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ==========================================================================
+   About Us - Master Artisans Grid & Portrait Image Fit
+   ========================================================================== */
+.about-artisans-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 26px !important;
+  align-items: stretch !important;
+}
+
+.artisan-profile-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.artisan-profile-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: var(--border-gold) !important;
+  box-shadow: var(--shadow-card), var(--shadow-gold) !important;
+}
+
+.artisan-img-wrap {
+  position: relative !important;
+  width: 100% !important;
+  height: 270px !important;
+  min-height: 270px !important;
+  max-height: 270px !important;
+  background: #11141a !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+.artisan-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  transition: transform 0.5s ease !important;
+}
+
+.artisan-profile-card:hover .artisan-img-wrap img {
+  transform: scale(1.05) !important;
+}
+
+.artisan-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  padding: 24px 20px !important;
+}
+
+.artisan-role {
+  color: var(--gold-primary) !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  margin-bottom: 12px !important;
+}
+
+.artisan-desc {
+  font-size: 0.9rem !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 18px !important;
+  flex-grow: 1 !important;
+}
+
+.artisan-btn {
+  margin-top: auto !important;
+  align-self: center !important;
+}
+
+@media (max-width: 992px) {
+  .about-artisans-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-artisans-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .artisan-img-wrap {
+    height: 240px !important;
+    min-height: 240px !important;
+    max-height: 240px !important;
+  }
+}
+
+/* ==========================================================================
+   Home Page 1 - Centered Apothecary Essentials Grid
+   ========================================================================== */
+.apothecary-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+  align-items: stretch !important;
+}
+
+@media (max-width: 992px) {
+  .apothecary-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 720px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .apothecary-products-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 380px !important;
+  }
+}
+
 
