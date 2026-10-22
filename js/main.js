@@ -113,10 +113,13 @@ const ImageFallbackHandler = {
 const FormValidator = {
   nameErrorMsg: 'Not applicable – please enter alphabets only.',
   phoneErrorMsg: 'Not applicable – please enter numbers only.',
+  emailUppercaseErrorMsg: 'Uppercase letters are not allowed. Please enter your email address in lowercase only.',
+  emailInvalidErrorMsg: 'Please enter a valid email address.',
 
   init() {
     this.bindNameInputs();
     this.bindPhoneInputs();
+    this.bindEmailInputs();
   },
 
   showError(input, msg) {
@@ -253,6 +256,54 @@ const FormValidator = {
         } else {
           this.clearError(input);
         }
+      });
+    });
+  },
+
+  validateEmail(input) {
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      if (input.required) {
+        this.showError(input, 'Please enter your email address.');
+        return false;
+      }
+      this.clearError(input);
+      return true;
+    }
+    // Strict uppercase check - uppercase characters are forbidden
+    if (/[A-Z]/.test(val)) {
+      this.showError(input, this.emailUppercaseErrorMsg);
+      return false;
+    }
+    // Check standard lowercase email structure
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    if (!emailRegex.test(val)) {
+      this.showError(input, this.emailInvalidErrorMsg);
+      return false;
+    }
+    this.clearError(input);
+    return true;
+  },
+
+  bindEmailInputs() {
+    const selector = 'input[type="email"], #clientEmail, #contactEmail, input[name="email"], input[data-validate="email"]';
+    const inputs = document.querySelectorAll(selector);
+
+    inputs.forEach(input => {
+      // Real-time detection while typing
+      input.addEventListener('input', () => {
+        const val = input.value;
+        if (/[A-Z]/.test(val)) {
+          this.showError(input, this.emailUppercaseErrorMsg);
+        } else {
+          this.clearError(input);
+        }
+      });
+
+      // Full validation on blur
+      input.addEventListener('blur', () => {
+        this.validateEmail(input);
       });
     });
   }
@@ -399,9 +450,14 @@ document.addEventListener('DOMContentLoaded', () => {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const emailInput = newsletterForm.querySelector('input[type="email"]');
-      if (emailInput && emailInput.value) {
+      if (emailInput) {
+        if (!FormValidator.validateEmail(emailInput)) {
+          emailInput.focus();
+          return;
+        }
         showToast('Welcome to the Sovereign Circle. Your exclusive pass is dispatched.', 'Membership Confirmed');
         emailInput.value = '';
+        FormValidator.clearError(emailInput);
       }
     });
   }
@@ -413,6 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const nameInput = contactForm.querySelector('input[name="fullName"], #contactFullName, input[type="text"]');
       const phoneInput = contactForm.querySelector('input[name="phone"], #contactPhone, input[type="tel"]');
+      const emailInput = contactForm.querySelector('input[type="email"], #contactEmail, input[name="email"]');
       
       let hasError = false;
       if (nameInput) {
@@ -420,6 +477,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!nameVal || !/^[A-Za-z\s]+$/.test(nameVal)) {
           FormValidator.showError(nameInput, FormValidator.nameErrorMsg);
           nameInput.focus();
+          hasError = true;
+        }
+      }
+      if (emailInput && !hasError) {
+        if (!FormValidator.validateEmail(emailInput)) {
+          emailInput.focus();
           hasError = true;
         }
       }
@@ -437,6 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
       showToast('Thank you. Your appointment booking inquiry has been dispatched to our Mayfair concierge.', 'Booking Request Sent');
       contactForm.reset();
       if (nameInput) FormValidator.clearError(nameInput);
+      if (emailInput) FormValidator.clearError(emailInput);
       if (phoneInput) FormValidator.clearError(phoneInput);
     });
   }

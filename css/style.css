@@ -3332,10 +3332,24 @@ img {
    Bulletproof Product Card & "+ Add to Satchel" Button Alignment
    ========================================================================== */
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 28px;
-  align-items: stretch;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
 }
 
 .product-card {
@@ -4282,6 +4296,174 @@ img {
     gap: 14px !important;
   }
 }
+
+/* ==========================================================================
+   Services Page: Traditional Razor Shaving & Scalp Spa 4-Container Grid
+   ========================================================================== */
+.shaving-services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+}
+
+.shaving-services-grid .service-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.shaving-services-grid .service-img-wrap {
+  position: relative !important;
+  height: 200px !important;
+  min-height: 200px !important;
+  max-height: 200px !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  background: #11141a !important;
+  flex-shrink: 0 !important;
+}
+
+.shaving-services-grid .service-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.shaving-services-grid .service-body {
+  padding: 16px 18px 18px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  box-sizing: border-box !important;
+}
+
+.shaving-services-grid .service-title {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  line-height: 1.35 !important;
+  color: var(--text-white) !important;
+  min-height: 2.7em !important;
+}
+
+.shaving-services-grid .service-desc {
+  font-size: 0.86rem !important;
+  line-height: 1.55 !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 14px !important;
+  flex-grow: 1 !important;
+}
+
+.shaving-services-grid .service-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 14px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  margin-top: auto !important;
+}
+
+@media (max-width: 1024px) {
+  .shaving-services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .shaving-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* ==========================================================================
+   Services Page: Grand Viking Beard Architecture & Service Images Fit
+   ========================================================================== */
+.service-card .service-img-wrap {
+  position: relative !important;
+  width: 100% !important;
+  height: 220px !important;
+  min-height: 220px !important;
+  max-height: 220px !important;
+  overflow: hidden !important;
+  background: #11141a !important;
+}
+
+.service-card .service-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 25% !important;
+  display: block !important;
+}
+
+/* ==========================================================================
+   Book Chair: Step 1 & Step 3 Compact, Balanced Grid & Padding
+   ========================================================================== */
+.booking-wizard-card {
+  padding: 28px 30px !important;
+}
+
+.booking-steps-nav {
+  margin-bottom: 24px !important;
+  padding-bottom: 16px !important;
+}
+
+.booking-step-content p {
+  margin-bottom: 16px !important;
+}
+
+/* Step 1: 8 Treatment Cards in balanced 2 columns on desktop/tablet, 1 on mobile */
+.booking-services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 14px !important;
+  margin-bottom: 22px !important;
+  width: 100% !important;
+}
+
+/* Step 3: 4 Master Barbers in balanced 2 columns (2x2) on desktop/tablet, 1 on mobile */
+.booking-artisans-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 14px !important;
+  margin-bottom: 22px !important;
+  width: 100% !important;
+}
+
+@media (max-width: 580px) {
+  .booking-services-grid,
+  .booking-artisans-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .booking-wizard-card {
+    padding: 20px 14px !important;
+  }
+}
+
+.selectable-card {
+  padding: 16px 14px !important;
+  min-height: 0 !important;
+}
+
+.selectable-card h4 {
+  line-height: 1.3 !important;
+}
+
+.selectable-card p {
+  line-height: 1.45 !important;
+}
+
 
 
 

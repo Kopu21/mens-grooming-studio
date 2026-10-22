@@ -205,6 +205,7 @@ const SovereignBooking = {
       finalForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const nameInput = document.getElementById('clientName');
+        const emailInput = document.getElementById('clientEmail');
         const phoneInput = document.getElementById('clientPhone');
 
         let hasError = false;
@@ -216,6 +217,23 @@ const SovereignBooking = {
             }
             nameInput.focus();
             hasError = true;
+          }
+        }
+        if (emailInput && !hasError) {
+          if (window.FormValidator) {
+            if (!window.FormValidator.validateEmail(emailInput)) {
+              emailInput.focus();
+              hasError = true;
+            }
+          } else {
+            const emailVal = emailInput.value.trim();
+            if (/[A-Z]/.test(emailVal)) {
+              hasError = true;
+              emailInput.focus();
+            } else if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(emailVal)) {
+              hasError = true;
+              emailInput.focus();
+            }
           }
         }
         if (phoneInput && !hasError) {
@@ -329,6 +347,8 @@ const SovereignBooking = {
     if (modal) modal.style.display = 'flex';
   }
 };
+
+window.SovereignBooking = SovereignBooking;
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('bookingStep1')) {
