@@ -5061,8 +5061,9 @@ img {
 
 .product-card.product-card-fine-fragrance .fragrance-desc,
 .products-grid .product-card[data-category="fragrance"] .product-body > p {
-  font-size: 0.83rem !important;
-  line-height: 1.45 !important;
+  font-size: 0.805rem !important;
+  line-height: 1.38 !important;
+  letter-spacing: -0.015em !important;
   min-height: 65px !important;
   margin-bottom: 12px !important;
 }
