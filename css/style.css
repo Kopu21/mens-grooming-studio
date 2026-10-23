@@ -4119,13 +4119,24 @@ img {
 /* ==========================================================================
    Home Page 1 - Centered Apothecary Essentials Grid
    ========================================================================== */
-.apothecary-products-grid {
+.apothecary-products-grid,
+.products-grid.apothecary-products-grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 24px !important;
   max-width: 1080px !important;
-  margin: 0 auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   align-items: stretch !important;
+  justify-content: center !important;
+}
+
+.apothecary-products-grid .product-card,
+.products-grid.apothecary-products-grid .product-card {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 @media (max-width: 992px) {
