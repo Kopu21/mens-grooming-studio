@@ -4471,6 +4471,54 @@ img {
 /* ==========================================================================
    Requirement 1: Products Page - First Row Baseline Alignment
    ========================================================================== */
+.products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+}
+
+.products-grid .product-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.products-grid .product-card .product-img-wrap {
+  position: relative !important;
+  width: 100% !important;
+  height: 220px !important;
+  overflow: hidden !important;
+  background: #11141a !important;
+  flex-shrink: 0 !important;
+}
+
+.products-grid .product-card .product-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.products-grid .product-card .product-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  padding: 20px 18px !important;
+}
+
+.products-grid .product-card .product-category {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--gold-primary) !important;
+  min-height: 18px !important;
+  margin-bottom: 6px !important;
+}
+
 .products-grid .product-card .product-title {
   font-size: 1.1rem !important;
   font-weight: 700 !important;
@@ -4482,24 +4530,27 @@ img {
 .products-grid .product-card .product-rating {
   height: 18px !important;
   margin-bottom: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
 }
 
 .products-grid .product-card .product-body > p {
   font-size: 0.85rem !important;
   line-height: 1.55 !important;
   color: var(--text-muted) !important;
-  min-height: 4em !important;
+  min-height: 4.8em !important;
   margin-bottom: 12px !important;
 }
 
 .products-grid .product-card .service-benefits-box {
-  min-height: 48px !important;
+  min-height: 52px !important;
   margin-bottom: 12px !important;
 }
 
 .products-grid .product-card .product-ingredient-tags-wrap {
-  min-height: 54px !important;
-  margin-bottom: 12px !important;
+  min-height: 58px !important;
+  margin-bottom: 14px !important;
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 6px !important;
@@ -4509,6 +4560,24 @@ img {
 .products-grid .product-card .product-price-row {
   margin-top: auto !important;
   padding-top: 14px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
 }
 
 /* ==========================================================================
@@ -4623,6 +4692,7 @@ img {
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
+  box-sizing: border-box !important;
   background: var(--bg-card) !important;
   border: 1px solid var(--border-gold) !important;
   padding: 26px 22px !important;
@@ -4640,6 +4710,8 @@ img {
   display: inline-flex !important;
   align-items: center !important;
   width: fit-content !important;
+  height: 26px !important;
+  min-height: 26px !important;
   margin-bottom: 12px !important;
   font-size: 0.72rem !important;
   font-weight: 700 !important;
@@ -4650,7 +4722,7 @@ img {
 .beard-geometry-card .geometry-card-title {
   font-size: 1.15rem !important;
   margin-bottom: 10px !important;
-  min-height: 2.6em !important;
+  min-height: 2.8em !important;
   line-height: 1.35 !important;
 }
 
@@ -4659,6 +4731,7 @@ img {
   color: var(--text-muted) !important;
   line-height: 1.6 !important;
   margin-bottom: 16px !important;
+  min-height: 108px !important;
   flex-grow: 1 !important;
 }
 
@@ -4672,6 +4745,10 @@ img {
   display: flex !important;
   align-items: center !important;
   gap: 6px !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
 }
 
 @media (max-width: 1024px) {
