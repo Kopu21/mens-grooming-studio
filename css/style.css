@@ -4965,3 +4965,94 @@ img {
 
 
 
+
+/* ==========================================================================
+   Targeted Scoped Fixes: Square Jawlines & Fine Fragrance Containers
+   ========================================================================== */
+
+/* 1. Home 2: Square Jawlines — The Rounded Anchor Recommendation Alignment */
+.beard-geometry-card.beard-card-anchor .anchor-recommendation,
+.beard-geometry-card:first-child .geometry-recommendation {
+  margin-top: auto !important;
+  padding-top: 14px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  font-size: 0.82rem !important;
+  color: var(--gold-primary) !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  line-height: 1.4 !important;
+  min-height: 46px !important;
+  box-sizing: border-box !important;
+}
+
+.beard-geometry-card.beard-card-anchor .anchor-recommendation i,
+.beard-geometry-card:first-child .geometry-recommendation i {
+  color: var(--gold-primary) !important;
+  font-size: 0.88rem !important;
+  flex-shrink: 0 !important;
+}
+
+.beard-geometry-card.beard-card-anchor .recommendation-group,
+.beard-geometry-card:first-child .recommendation-group {
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 4px !important;
+  row-gap: 2px !important;
+}
+
+.beard-geometry-card.beard-card-anchor .rec-label,
+.beard-geometry-card:first-child .rec-label {
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  color: var(--gold-primary) !important;
+}
+
+.beard-geometry-card.beard-card-anchor .rec-value,
+.beard-geometry-card:first-child .rec-value {
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  color: var(--gold-primary) !important;
+}
+
+/* 2. Products Page: Fine Fragrance — Smoked Oak & Bourbon Extract Title & Category Alignment */
+.product-card.product-card-fine-fragrance .fragrance-category,
+.products-grid .product-card[data-category="fragrance"] .product-category {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--gold-primary) !important;
+  min-height: 18px !important;
+  margin-top: 0 !important;
+  margin-bottom: 6px !important;
+  line-height: 1.4 !important;
+  display: block !important;
+  text-align: left !important;
+}
+
+.product-card.product-card-fine-fragrance .fragrance-title,
+.products-grid .product-card[data-category="fragrance"] .product-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  min-height: 2.8em !important;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  text-align: left !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+  display: block !important;
+}
+
+.product-card.product-card-fine-fragrance .product-rating,
+.products-grid .product-card[data-category="fragrance"] .product-rating {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
