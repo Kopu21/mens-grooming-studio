@@ -76,8 +76,8 @@ const DirectionManager = {
     const toggleBtns = document.querySelectorAll('.dir-toggle-btn');
     toggleBtns.forEach(btn => {
       btn.innerHTML = dir === 'ltr' 
-        ? '<i class="fas fa-right-left"></i> <span>RTL</span>' 
-        : '<i class="fas fa-right-left"></i> <span>LTR</span>';
+        ? '<span>RTL</span>' 
+        : '<span>LTR</span>';
       btn.setAttribute('title', `Switch to ${dir === 'ltr' ? 'RTL' : 'LTR'} layout`);
       btn.setAttribute('aria-label', `Switch to ${dir === 'ltr' ? 'RTL' : 'LTR'} layout`);
     });
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="mobile-util-title">Quick Settings & Reservation</div>
         <div class="mobile-util-row">
           <button class="nav-control-btn dir-toggle-btn" title="Toggle RTL/LTR Direction" aria-label="Toggle Direction">
-            <i class="fas fa-right-left"></i> <span>RTL</span>
+            <span>RTL</span>
           </button>
           <button class="nav-control-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Dark/Light Theme">
             <i class="fas fa-sun text-gold"></i>
