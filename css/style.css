@@ -39,8 +39,8 @@
   --border-gold: rgba(212, 175, 55, 0.35);
   --border-gold-bright: rgba(212, 175, 55, 0.85);
   
-  --overlay-hero: linear-gradient(90deg, rgba(10, 12, 15, 0.48) 0%, rgba(10, 12, 15, 0.30) 52%, rgba(10, 12, 15, 0.10) 100%);
-  --overlay-banner: linear-gradient(rgba(10, 12, 15, 0.26), rgba(10, 12, 15, 0.36));
+  --overlay-hero: linear-gradient(90deg, rgba(10, 12, 15, 0.44) 0%, rgba(10, 12, 15, 0.24) 50%, rgba(10, 12, 15, 0.06) 100%);
+  --overlay-banner: linear-gradient(rgba(10, 12, 15, 0.22), rgba(10, 12, 15, 0.30));
   --page-pattern: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   
   --font-serif: 'Cinzel', serif;
@@ -89,8 +89,8 @@
   --border-gold: rgba(179, 134, 11, 0.45);
   --border-gold-bright: rgba(179, 134, 11, 0.9);
   
-  --overlay-hero: linear-gradient(90deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.35) 52%, rgba(255, 255, 255, 0.10) 100%);
-  --overlay-banner: linear-gradient(rgba(248, 250, 252, 0.32), rgba(244, 246, 249, 0.42));
+  --overlay-hero: linear-gradient(90deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.38) 50%, rgba(255, 255, 255, 0.08) 100%);
+  --overlay-banner: linear-gradient(rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.54));
   --page-pattern: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   
   --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.12);
@@ -150,19 +150,28 @@ body {
 }
 
 [data-theme="light"] .page-bg-backdrop .hero-title,
-[data-theme="light"] .page-bg-backdrop .section-title,
+[data-theme="light"] .page-bg-backdrop .section-title {
+  color: #0a0c0f;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
 [data-theme="light"] .page-bg-backdrop .hero-description,
-[data-theme="light"] .page-bg-backdrop .section-desc,
+[data-theme="light"] .page-bg-backdrop .section-desc {
+  color: #1e293b;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
 [data-theme="light"] .page-bg-backdrop .hero-stat-item,
 [data-theme="light"] .page-bg-backdrop .section-subtitle,
 [data-theme="light"] .page-bg-backdrop .hero-content strong,
 [data-theme="light"] .page-bg-backdrop .hero-content span {
-  text-shadow: 0 1px 12px rgba(255, 255, 255, 0.92), 0 0 20px rgba(255, 255, 255, 0.78);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
 }
 
 [data-theme="light"] .page-bg-backdrop .hero-tag {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(179, 134, 11, 0.45);
 }
 
 /* Typography */
@@ -312,6 +321,19 @@ img {
   color: var(--gold-primary) !important;
   transform: translateY(-2px);
   box-shadow: var(--shadow-gold);
+}
+
+[data-theme="light"] .btn-secondary {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(179, 134, 11, 0.6) !important;
+  color: #111827 !important;
+  backdrop-filter: none !important;
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: #ffffff !important;
+  border-color: #8c6703 !important;
+  color: #8c6703 !important;
 }
 
 .btn-dark {
@@ -2140,11 +2162,11 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
 }
 
 [dir="rtl"] .hero-bg-overlay {
-  background: linear-gradient(-90deg, rgba(10, 12, 15, 0.48) 0%, rgba(10, 12, 15, 0.30) 52%, rgba(10, 12, 15, 0.10) 100%);
+  background: linear-gradient(-90deg, rgba(10, 12, 15, 0.44) 0%, rgba(10, 12, 15, 0.24) 50%, rgba(10, 12, 15, 0.06) 100%);
 }
 
 [data-theme="light"][dir="rtl"] .hero-bg-overlay {
-  background: linear-gradient(-90deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.35) 52%, rgba(255, 255, 255, 0.10) 100%);
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.38) 50%, rgba(255, 255, 255, 0.08) 100%);
 }
 
 /* ==========================================================================
@@ -2335,11 +2357,11 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
   }
 
   .hero-bg-overlay {
-    background: linear-gradient(180deg, rgba(10, 12, 15, 0.45) 0%, rgba(10, 12, 15, 0.28) 50%, rgba(10, 12, 15, 0.45) 100%) !important;
+    background: linear-gradient(180deg, rgba(10, 12, 15, 0.38) 0%, rgba(10, 12, 15, 0.20) 50%, rgba(10, 12, 15, 0.38) 100%) !important;
   }
 
   [data-theme="light"] .hero-bg-overlay {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.32) 50%, rgba(255, 255, 255, 0.55) 100%) !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0.36) 50%, rgba(255, 255, 255, 0.58) 100%) !important;
   }
 
   .hero-title {
@@ -3808,7 +3830,7 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
    Experience The Sovereign Standard CTA Banner - Full Dark & Light Contrast
    ========================================================================== */
 .cta-experience-banner {
-  background: linear-gradient(rgba(11, 13, 16, 0.32), rgba(11, 13, 16, 0.42)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: linear-gradient(rgba(11, 13, 16, 0.25), rgba(11, 13, 16, 0.34)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   border-top: 1px solid var(--border-gold);
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
@@ -3841,7 +3863,7 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
 
 /* Light Mode Overrides for Perfect WCAG 2.2 AA Contrast */
 [data-theme="light"] .cta-experience-banner {
-  background: linear-gradient(rgba(248, 250, 252, 0.38), rgba(244, 246, 249, 0.48)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat !important;
+  background: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.50)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat !important;
   border-top: 1px solid rgba(179, 134, 11, 0.5) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
